@@ -12,48 +12,27 @@ void ui_Screen1_screen_init(void)
     lv_obj_set_style_bg_color(ui_Screen1, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui_Screen1, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
 
-    ui_clock = lv_label_create(ui_Screen1);
-    lv_obj_set_width(ui_clock, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_height(ui_clock, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_clock, 0);
-    lv_obj_set_y(ui_clock, -81);
-    lv_obj_set_align(ui_clock, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_clock, "12:25:45");
-    lv_obj_set_style_text_color(ui_clock, lv_color_hex(0x293062), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_opa(ui_clock, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui_clock, &ui_font_clock_66, LV_PART_MAIN | LV_STATE_DEFAULT);
-
-    ui_date = lv_label_create(ui_Screen1);
-    lv_obj_set_width(ui_date, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_height(ui_date, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_date, 0);
-    lv_obj_set_y(ui_date, -44);
-    lv_obj_set_align(ui_date, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_date, "Mon 28 Dec 2023");
-    lv_obj_set_style_text_color(ui_date, lv_color_hex(0x9C9CD9), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_opa(ui_date, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui_date, &lv_font_montserrat_18, LV_PART_MAIN | LV_STATE_DEFAULT);
-
     ui_logo = lv_imgbtn_create(ui_Screen1);
-    lv_imgbtn_set_src(ui_logo, LV_IMGBTN_STATE_RELEASED, NULL, &ui_img_sls_logo_png, NULL);
-    lv_imgbtn_set_src(ui_logo, LV_IMGBTN_STATE_PRESSED, NULL, &ui_img_sls_logo_png, NULL);
+    lv_imgbtn_set_src(ui_logo, LV_IMGBTN_STATE_RELEASED, NULL, &ui_img_oizom_logo_png, NULL);
+    lv_imgbtn_set_src(ui_logo, LV_IMGBTN_STATE_PRESSED, NULL, &ui_img_oizom_logo_png, NULL);
     lv_imgbtn_set_src(ui_logo, LV_IMGBTN_STATE_DISABLED, NULL, &ui__temporary_image, NULL);
     lv_imgbtn_set_src(ui_logo, LV_IMGBTN_STATE_CHECKED_PRESSED, NULL, &ui__temporary_image, NULL);
     lv_imgbtn_set_src(ui_logo, LV_IMGBTN_STATE_CHECKED_RELEASED, NULL, &ui__temporary_image, NULL);
     lv_imgbtn_set_src(ui_logo, LV_IMGBTN_STATE_CHECKED_DISABLED, NULL, &ui__temporary_image, NULL);
-    lv_obj_set_height(ui_logo, 123);
+    lv_obj_set_height(ui_logo, 206);
     lv_obj_set_width(ui_logo, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_x(ui_logo, 0);
-    lv_obj_set_y(ui_logo, 32);
+    lv_obj_set_x(ui_logo, 2);
+    lv_obj_set_y(ui_logo, -10);
     lv_obj_set_align(ui_logo, LV_ALIGN_CENTER);
 
     ui_demo = lv_label_create(ui_Screen1);
     lv_obj_set_width(ui_demo, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_demo, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_demo, 0);
-    lv_obj_set_y(ui_demo, 109);
+    lv_obj_set_x(ui_demo, 7);
+    lv_obj_set_y(ui_demo, 99);
     lv_obj_set_align(ui_demo, LV_ALIGN_CENTER);
     lv_label_set_text(ui_demo, "OIZOM AIROWL");
+    lv_obj_set_style_text_font(ui_demo, &ui_font_clock48, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_add_event_cb(ui_logo, ui_event_logo, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_Screen1, ui_event_Screen1, LV_EVENT_ALL, NULL);

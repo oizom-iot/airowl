@@ -12,17 +12,6 @@ void ui_Screen3_screen_init(void)
     lv_obj_set_style_bg_color(ui_Screen3, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui_Screen3, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
 
-    ui_clock2 = lv_label_create(ui_Screen3);
-    lv_obj_set_width(ui_clock2, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_height(ui_clock2, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_clock2, 118);
-    lv_obj_set_y(ui_clock2, -106);
-    lv_obj_set_align(ui_clock2, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_clock2, "12:25:45");
-    lv_obj_set_style_text_color(ui_clock2, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_opa(ui_clock2, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui_clock2, &lv_font_montserrat_18, LV_PART_MAIN | LV_STATE_DEFAULT);
-
     ui_Container6 = lv_obj_create(ui_Screen3);
     lv_obj_remove_style_all(ui_Container6);
     lv_obj_set_width(ui_Container6, 314);
@@ -223,9 +212,9 @@ void ui_Screen3_screen_init(void)
 
     ui_Container9 = lv_obj_create(ui_Screen3);
     lv_obj_remove_style_all(ui_Container9);
-    lv_obj_set_width(ui_Container9, 162);
+    lv_obj_set_width(ui_Container9, 157);
     lv_obj_set_height(ui_Container9, 83);
-    lv_obj_set_x(ui_Container9, 80);
+    lv_obj_set_x(ui_Container9, 77);
     lv_obj_set_y(ui_Container9, -49);
     lv_obj_set_align(ui_Container9, LV_ALIGN_CENTER);
     lv_obj_clear_flag(ui_Container9, LV_OBJ_FLAG_CLICKABLE | LV_OBJ_FLAG_SCROLLABLE);      /// Flags
@@ -234,7 +223,7 @@ void ui_Screen3_screen_init(void)
     lv_obj_set_style_border_width(ui_Container9, 1, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_Button2 = lv_btn_create(ui_Container9);
-    lv_obj_set_width(ui_Button2, lv_pct(93));
+    lv_obj_set_width(ui_Button2, lv_pct(91));
     lv_obj_set_height(ui_Button2, lv_pct(100));
     lv_obj_set_y(ui_Button2, 2);
     lv_obj_set_x(ui_Button2, lv_pct(0));
@@ -292,8 +281,8 @@ void ui_Screen3_screen_init(void)
 
     ui_Container10 = lv_obj_create(ui_Screen3);
     lv_obj_remove_style_all(ui_Container10);
-    lv_obj_set_width(ui_Container10, 157);
-    lv_obj_set_height(ui_Container10, 87);
+    lv_obj_set_width(ui_Container10, 156);
+    lv_obj_set_height(ui_Container10, 85);
     lv_obj_set_x(ui_Container10, 79);
     lv_obj_set_y(ui_Container10, 35);
     lv_obj_set_align(ui_Container10, LV_ALIGN_CENTER);
@@ -397,6 +386,17 @@ void ui_Screen3_screen_init(void)
     lv_obj_set_style_text_opa(ui_pm10label2, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_font(ui_pm10label2, &lv_font_montserrat_40, LV_PART_MAIN | LV_STATE_DEFAULT);
 
+    ui_clock2 = lv_label_create(ui_Screen3);
+    lv_obj_set_width(ui_clock2, LV_SIZE_CONTENT);   /// 1
+    lv_obj_set_height(ui_clock2, LV_SIZE_CONTENT);    /// 1
+    lv_obj_set_x(ui_clock2, 104);
+    lv_obj_set_y(ui_clock2, -101);
+    lv_obj_set_align(ui_clock2, LV_ALIGN_CENTER);
+    lv_label_set_text(ui_clock2, "12:25:45");
+    lv_obj_set_style_text_color(ui_clock2, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui_clock2, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui_clock2, &ui_font_clock24, LV_PART_MAIN | LV_STATE_DEFAULT);
+
     lv_obj_add_event_cb(ui_Button1, ui_event_Button1, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_Container7, ui_event_Container7, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_Button3, ui_event_Button3, LV_EVENT_ALL, NULL);
@@ -405,5 +405,6 @@ void ui_Screen3_screen_init(void)
     lv_obj_add_event_cb(ui_Button4, ui_event_Button4, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_Button6, ui_event_Button6, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_Container11, ui_event_Container11, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_Screen3, ui_event_Screen3, LV_EVENT_ALL, NULL);
 
 }

@@ -9,8 +9,10 @@ SET(SOURCES screens/ui_Screen1.c
     ui.c
     components/ui_comp_hook.c
     ui_helpers.c
-    images/ui_img_sls_logo_png.c
+    images/ui_img_oizom_logo_png.c
     ui_temporary_image.c
+    fonts/ui_font_clock24.c
+    fonts/ui_font_clock48.c
     fonts/ui_font_clock_66.c)
 
 add_library(ui ${SOURCES})

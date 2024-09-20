@@ -7,6 +7,7 @@
 
 void ui_Screen4_screen_init(void)
 {
+    int array1[15] = {2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 600, 600, 600, 800, 1500, 1500};// this array has been added to test chart creation
     ui_Screen4 = lv_obj_create(NULL);
     lv_obj_clear_flag(ui_Screen4, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
     lv_obj_set_style_bg_color(ui_Screen4, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -28,7 +29,8 @@ void ui_Screen4_screen_init(void)
     lv_chart_series_t * ui_Chart3_series_1 = lv_chart_add_series(ui_Chart3, lv_color_hex(0x086003),
                                                                  LV_CHART_AXIS_PRIMARY_Y);
     static lv_coord_t ui_Chart3_series_1_array[] = { 550, 650, 750, 800, 1500, 1200, 1110, 800, 800, 1200, 1400, 1700, 1300, 1100, 600 };
-    lv_chart_set_ext_y_array(ui_Chart3, ui_Chart3_series_1, ui_Chart3_series_1_array);
+    // array1 has been used below to test, original array set through squareline studio is the ui_Chart3_series_1_array.
+    lv_chart_set_ext_y_array(ui_Chart3, ui_Chart3_series_1, array1);
     lv_obj_set_style_bg_color(ui_Chart3, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui_Chart3, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
 

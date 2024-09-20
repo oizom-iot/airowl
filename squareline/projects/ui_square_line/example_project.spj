@@ -8,643 +8,6 @@
         "deepid": -1553594904,
         "children": [
           {
-            "guid": "GUID37592496-734286S7272104",
-            "deepid": 577585276,
-            "locked": false,
-            "properties": [
-              {
-                "nid": -391186094,
-                "strtype": "OBJECT/Name",
-                "strval": "clock",
-                "InheritedType": 10
-              },
-              {
-                "nid": -1435513780,
-                "strtype": "OBJECT/Layout",
-                "InheritedType": 1
-              },
-              {
-                "Flow": 0,
-                "Wrap": false,
-                "Reversed": false,
-                "MainAlignment": 0,
-                "CrossAlignment": 0,
-                "TrackAlignment": 0,
-                "LayoutType": 0,
-                "nid": -970954703,
-                "strtype": "OBJECT/Layout_type",
-                "strval": "No_layout",
-                "InheritedType": 13
-              },
-              {
-                "nid": 866812399,
-                "strtype": "OBJECT/Transform",
-                "InheritedType": 1
-              },
-              {
-                "nid": 780342196,
-                "flags": 17,
-                "strtype": "OBJECT/Position",
-                "intarray": [
-                  0,
-                  -81
-                ],
-                "InheritedType": 7
-              },
-              {
-                "nid": -1040056470,
-                "flags": 51,
-                "strtype": "OBJECT/Size",
-                "intarray": [
-                  1,
-                  1
-                ],
-                "InheritedType": 7
-              },
-              {
-                "nid": 478280348,
-                "strtype": "OBJECT/Align",
-                "strval": "CENTER",
-                "InheritedType": 3
-              },
-              {
-                "nid": -791850149,
-                "flags": 1048576,
-                "strtype": "OBJECT/Flags",
-                "InheritedType": 1
-              },
-              {
-                "nid": 151935014,
-                "strtype": "OBJECT/Hidden",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 911704725,
-                "strtype": "OBJECT/Clickable",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -492049646,
-                "strtype": "OBJECT/Checkable",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1227131743,
-                "strtype": "OBJECT/Press_lock",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": 331638829,
-                "strtype": "OBJECT/Click_focusable",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1787687135,
-                "strtype": "OBJECT/Adv_hittest",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1598252492,
-                "strtype": "OBJECT/Ignore_layout",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1430883322,
-                "strtype": "OBJECT/Floating",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 508784862,
-                "strtype": "LABEL/Overflow_visible",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -1028390341,
-                "strtype": "OBJECT/Flex_in_new_track",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -184272175,
-                "strtype": "OBJECT/Event_bubble",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 2046817571,
-                "strtype": "OBJECT/Gesture_bubble",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": -2085905542,
-                "strtype": "OBJECT/Snappable",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1366558963,
-                "strtype": "OBJECT/Scrollable",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": -1510806240,
-                "strtype": "OBJECT/Scroll_elastic",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": 129997363,
-                "strtype": "OBJECT/Scroll_momentum",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": -1410831109,
-                "strtype": "OBJECT/Scroll_on_focus",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -1146575607,
-                "strtype": "OBJECT/Scroll_chain",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": 2127928626,
-                "strtype": "LABEL/Scroll_with_arrow",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1805253906,
-                "strtype": "OBJECT/Scroll_one",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -835759780,
-                "strtype": "OBJECT/Scrollbar_mode",
-                "strval": "AUTO",
-                "InheritedType": 3
-              },
-              {
-                "nid": 1849919725,
-                "strtype": "OBJECT/Scroll_direction",
-                "strval": "ALL",
-                "InheritedType": 3
-              },
-              {
-                "nid": -862585333,
-                "flags": 1048576,
-                "strtype": "OBJECT/States",
-                "InheritedType": 1
-              },
-              {
-                "nid": 46918859,
-                "strtype": "OBJECT/Checked",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1715536837,
-                "strtype": "OBJECT/Disabled",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1926397650,
-                "strtype": "OBJECT/Focused",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1667368888,
-                "strtype": "OBJECT/Pressed",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -35630925,
-                "strtype": "LABEL/Edited",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -1291508026,
-                "strtype": "OBJECT/User_1",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -1961706839,
-                "strtype": "OBJECT/User_2",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -359170196,
-                "strtype": "OBJECT/User_3",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -6022731,
-                "strtype": "OBJECT/User_4",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -1773652209,
-                "strtype": "LABEL/Label",
-                "InheritedType": 1
-              },
-              {
-                "nid": 139781637,
-                "strtype": "LABEL/Long_mode",
-                "strval": "WRAP",
-                "InheritedType": 3
-              },
-              {
-                "nid": -670898454,
-                "strtype": "LABEL/Text",
-                "strval": "12:25:45",
-                "InheritedType": 10
-              },
-              {
-                "part": "lv.PART.MAIN",
-                "childs": [
-                  {
-                    "nid": -1491804750,
-                    "strtype": "_style/StyleState",
-                    "strval": "DEFAULT",
-                    "childs": [
-                      {
-                        "nid": -1917446359,
-                        "strtype": "_style/Text_Color",
-                        "intarray": [
-                          41,
-                          48,
-                          98,
-                          255
-                        ],
-                        "InheritedType": 7
-                      },
-                      {
-                        "nid": 728673344,
-                        "strtype": "_style/Text_Font",
-                        "strval": "clock_66",
-                        "InheritedType": 3
-                      }
-                    ],
-                    "InheritedType": 1
-                  }
-                ],
-                "nid": -1757436202,
-                "strtype": "LABEL/Style_main",
-                "strval": "lv.PART.MAIN, Text, Rectangle, Pad, Transform",
-                "InheritedType": 11
-              },
-              {
-                "nid": -622383492,
-                "strtype": "LABEL/Recolor",
-                "strval": "False",
-                "InheritedType": 2
-              }
-            ],
-            "saved_objtypeKey": "LABEL",
-            "tree_closed": true
-          },
-          {
-            "guid": "GUID36914867-734700S7272104",
-            "deepid": 827844535,
-            "locked": false,
-            "properties": [
-              {
-                "nid": -730362594,
-                "strtype": "OBJECT/Name",
-                "strval": "date",
-                "InheritedType": 10
-              },
-              {
-                "nid": 878434800,
-                "strtype": "OBJECT/Layout",
-                "InheritedType": 1
-              },
-              {
-                "Flow": 0,
-                "Wrap": false,
-                "Reversed": false,
-                "MainAlignment": 0,
-                "CrossAlignment": 0,
-                "TrackAlignment": 0,
-                "LayoutType": 0,
-                "nid": -1981542728,
-                "strtype": "OBJECT/Layout_type",
-                "strval": "No_layout",
-                "InheritedType": 13
-              },
-              {
-                "nid": 2031656145,
-                "strtype": "OBJECT/Transform",
-                "InheritedType": 1
-              },
-              {
-                "nid": -2132418902,
-                "flags": 17,
-                "strtype": "OBJECT/Position",
-                "intarray": [
-                  0,
-                  -44
-                ],
-                "InheritedType": 7
-              },
-              {
-                "nid": -262736957,
-                "flags": 51,
-                "strtype": "OBJECT/Size",
-                "intarray": [
-                  1,
-                  1
-                ],
-                "InheritedType": 7
-              },
-              {
-                "nid": 637996206,
-                "strtype": "OBJECT/Align",
-                "strval": "CENTER",
-                "InheritedType": 3
-              },
-              {
-                "nid": 1015413750,
-                "flags": 1048576,
-                "strtype": "OBJECT/Flags",
-                "InheritedType": 1
-              },
-              {
-                "nid": -228648629,
-                "strtype": "OBJECT/Hidden",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 192535579,
-                "strtype": "OBJECT/Clickable",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -111637586,
-                "strtype": "OBJECT/Checkable",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -601593127,
-                "strtype": "OBJECT/Press_lock",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": 907243859,
-                "strtype": "OBJECT/Click_focusable",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1244906291,
-                "strtype": "OBJECT/Adv_hittest",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -1962888370,
-                "strtype": "OBJECT/Ignore_layout",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 2118246107,
-                "strtype": "OBJECT/Floating",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1103565520,
-                "strtype": "LABEL/Overflow_visible",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 861476608,
-                "strtype": "OBJECT/Flex_in_new_track",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -441723734,
-                "strtype": "OBJECT/Event_bubble",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -1178170754,
-                "strtype": "OBJECT/Gesture_bubble",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": -674267286,
-                "strtype": "OBJECT/Snappable",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": -739659497,
-                "strtype": "OBJECT/Scrollable",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": 518620957,
-                "strtype": "OBJECT/Scroll_elastic",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": -127549662,
-                "strtype": "OBJECT/Scroll_momentum",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": -2014478043,
-                "strtype": "OBJECT/Scroll_on_focus",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1255165115,
-                "strtype": "OBJECT/Scroll_chain",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": -506814957,
-                "strtype": "LABEL/Scroll_with_arrow",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 2080931691,
-                "strtype": "OBJECT/Scroll_one",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -497720576,
-                "strtype": "OBJECT/Scrollbar_mode",
-                "strval": "AUTO",
-                "InheritedType": 3
-              },
-              {
-                "nid": -169892429,
-                "strtype": "OBJECT/Scroll_direction",
-                "strval": "ALL",
-                "InheritedType": 3
-              },
-              {
-                "nid": 1337329743,
-                "flags": 1048576,
-                "strtype": "OBJECT/States",
-                "InheritedType": 1
-              },
-              {
-                "nid": -31316271,
-                "strtype": "OBJECT/Checked",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1217097341,
-                "strtype": "OBJECT/Disabled",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 692691035,
-                "strtype": "OBJECT/Focused",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -864257533,
-                "strtype": "OBJECT/Pressed",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1122953099,
-                "strtype": "LABEL/Edited",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 88973972,
-                "strtype": "OBJECT/User_1",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -401825503,
-                "strtype": "OBJECT/User_2",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -1285264259,
-                "strtype": "OBJECT/User_3",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1558049228,
-                "strtype": "OBJECT/User_4",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 504027284,
-                "strtype": "LABEL/Label",
-                "InheritedType": 1
-              },
-              {
-                "nid": 6678906,
-                "strtype": "LABEL/Long_mode",
-                "strval": "WRAP",
-                "InheritedType": 3
-              },
-              {
-                "nid": -1636951303,
-                "strtype": "LABEL/Text",
-                "strval": "Mon 28 Dec 2023",
-                "InheritedType": 10
-              },
-              {
-                "part": "lv.PART.MAIN",
-                "childs": [
-                  {
-                    "nid": -1406380500,
-                    "strtype": "_style/StyleState",
-                    "strval": "DEFAULT",
-                    "childs": [
-                      {
-                        "nid": 965238931,
-                        "strtype": "_style/Text_Color",
-                        "intarray": [
-                          156,
-                          156,
-                          217,
-                          255
-                        ],
-                        "InheritedType": 7
-                      },
-                      {
-                        "nid": -273147408,
-                        "strtype": "_style/Text_Font",
-                        "strval": "montserrat_18",
-                        "InheritedType": 3
-                      }
-                    ],
-                    "InheritedType": 1
-                  }
-                ],
-                "nid": 163161040,
-                "strtype": "LABEL/Style_main",
-                "strval": "lv.PART.MAIN, Text, Rectangle, Pad, Transform",
-                "InheritedType": 11
-              },
-              {
-                "nid": -1836709876,
-                "strtype": "LABEL/Recolor",
-                "strval": "False",
-                "InheritedType": 2
-              }
-            ],
-            "saved_objtypeKey": "LABEL"
-          },
-          {
             "guid": "GUID34931972-735114S9582104",
             "deepid": 1842628964,
             "locked": false,
@@ -683,8 +46,8 @@
                 "flags": 17,
                 "strtype": "OBJECT/Position",
                 "intarray": [
-                  0,
-                  32
+                  2,
+                  -10
                 ],
                 "InheritedType": 7
               },
@@ -694,7 +57,7 @@
                 "strtype": "OBJECT/Size",
                 "intarray": [
                   1,
-                  123
+                  206
                 ],
                 "InheritedType": 7
               },
@@ -916,7 +279,7 @@
               {
                 "nid": 1897145696,
                 "strtype": "IMGBUTTON/Image_released",
-                "strval": "assets/sls_logo.png",
+                "strval": "assets/oizom_logo.png",
                 "InheritedType": 5
               },
               {
@@ -928,25 +291,25 @@
               {
                 "nid": -1294212025,
                 "strtype": "IMGBUTTON/Image_disabled",
-                "strval": "",
+                "strval": "-",
                 "InheritedType": 5
               },
               {
                 "nid": 785403753,
                 "strtype": "IMGBUTTON/Image_checked_released",
-                "strval": "",
+                "strval": "-",
                 "InheritedType": 5
               },
               {
                 "nid": -1237643181,
                 "strtype": "IMGBUTTON/Image_checked_pressed",
-                "strval": "",
+                "strval": "-",
                 "InheritedType": 5
               },
               {
                 "nid": 88474128,
                 "strtype": "IMGBUTTON/Image_checked_disabled",
-                "strval": "",
+                "strval": "-",
                 "InheritedType": 5
               },
               {
@@ -1168,8 +531,8 @@
                 "flags": 17,
                 "strtype": "OBJECT/Position",
                 "intarray": [
-                  0,
-                  109
+                  7,
+                  99
                 ],
                 "InheritedType": 7
               },
@@ -1406,7 +769,22 @@
               },
               {
                 "part": "lv.PART.MAIN",
-                "childs": [],
+                "childs": [
+                  {
+                    "nid": 877383797,
+                    "strtype": "_style/StyleState",
+                    "strval": "DEFAULT",
+                    "childs": [
+                      {
+                        "nid": -599729572,
+                        "strtype": "_style/Text_Font",
+                        "strval": "clock48",
+                        "InheritedType": 3
+                      }
+                    ],
+                    "InheritedType": 1
+                  }
+                ],
                 "nid": -2089590377,
                 "strtype": "LABEL/Style_main",
                 "strval": "lv.PART.MAIN, Text, Rectangle, Pad, Transform",
@@ -1664,7 +1042,7 @@
             "disabled": false,
             "nid": -44711555,
             "strtype": "_event/EventHandler",
-            "strval": "CLICKED",
+            "strval": "SCREEN_LOADED",
             "childs": [
               {
                 "nid": -1792280041,
@@ -1728,6 +1106,7 @@
                   {
                     "nid": 16044076,
                     "strtype": "CHANGE SCREEN/Delay",
+                    "integer": 3000,
                     "InheritedType": 6
                   }
                 ],
@@ -3980,7 +3359,7 @@
                   {
                     "nid": -2146650432,
                     "strtype": "CHANGE SCREEN/Fade_mode",
-                    "strval": "FADE_ON",
+                    "strval": "MOVE_LEFT",
                     "InheritedType": 3
                   },
                   {
@@ -4007,325 +3386,6 @@
         "guid": "GUID55236347-951500S9483263",
         "deepid": 175181786,
         "children": [
-          {
-            "guid": "GUID24198050-952852S607513263",
-            "deepid": 577585276,
-            "locked": false,
-            "properties": [
-              {
-                "nid": 1484353480,
-                "strtype": "OBJECT/Name",
-                "strval": "clock2",
-                "InheritedType": 10
-              },
-              {
-                "nid": 1210918983,
-                "strtype": "OBJECT/Layout",
-                "InheritedType": 1
-              },
-              {
-                "Flow": 0,
-                "Wrap": false,
-                "Reversed": false,
-                "MainAlignment": 0,
-                "CrossAlignment": 0,
-                "TrackAlignment": 0,
-                "LayoutType": 0,
-                "nid": 974257282,
-                "strtype": "OBJECT/Layout_type",
-                "strval": "No_layout",
-                "InheritedType": 13
-              },
-              {
-                "nid": -1380921461,
-                "strtype": "OBJECT/Transform",
-                "InheritedType": 1
-              },
-              {
-                "nid": -484968314,
-                "flags": 17,
-                "strtype": "OBJECT/Position",
-                "intarray": [
-                  118,
-                  -106
-                ],
-                "InheritedType": 7
-              },
-              {
-                "nid": 721794461,
-                "flags": 51,
-                "strtype": "OBJECT/Size",
-                "intarray": [
-                  1,
-                  1
-                ],
-                "InheritedType": 7
-              },
-              {
-                "nid": -2014614506,
-                "strtype": "OBJECT/Align",
-                "strval": "CENTER",
-                "InheritedType": 3
-              },
-              {
-                "nid": 658035284,
-                "flags": 1048576,
-                "strtype": "OBJECT/Flags",
-                "InheritedType": 1
-              },
-              {
-                "nid": -266819291,
-                "strtype": "OBJECT/Hidden",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -450845402,
-                "strtype": "OBJECT/Clickable",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -667001923,
-                "strtype": "OBJECT/Checkable",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -1545689710,
-                "strtype": "OBJECT/Press_lock",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": 992253054,
-                "strtype": "OBJECT/Click_focusable",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1876497431,
-                "strtype": "OBJECT/Adv_hittest",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -1425367412,
-                "strtype": "OBJECT/Ignore_layout",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -679592664,
-                "strtype": "OBJECT/Floating",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1679981124,
-                "strtype": "LABEL/Overflow_visible",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -1086650143,
-                "strtype": "OBJECT/Flex_in_new_track",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -467035680,
-                "strtype": "OBJECT/Event_bubble",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1754049563,
-                "strtype": "OBJECT/Gesture_bubble",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1201302348,
-                "strtype": "OBJECT/Snappable",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1339478729,
-                "strtype": "OBJECT/Scrollable",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": -1475158471,
-                "strtype": "OBJECT/Scroll_elastic",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": 728523019,
-                "strtype": "OBJECT/Scroll_momentum",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": -1281371154,
-                "strtype": "OBJECT/Scroll_on_focus",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1284753995,
-                "strtype": "OBJECT/Scroll_chain",
-                "strval": "True",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1463075066,
-                "strtype": "LABEL/Scroll_with_arrow",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1180253069,
-                "strtype": "OBJECT/Scroll_one",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -798818177,
-                "strtype": "OBJECT/Scrollbar_mode",
-                "strval": "AUTO",
-                "InheritedType": 3
-              },
-              {
-                "nid": -92520296,
-                "strtype": "OBJECT/Scroll_direction",
-                "strval": "ALL",
-                "InheritedType": 3
-              },
-              {
-                "nid": -1147122339,
-                "flags": 1048576,
-                "strtype": "OBJECT/States",
-                "InheritedType": 1
-              },
-              {
-                "nid": -811420141,
-                "strtype": "OBJECT/Checked",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 424018898,
-                "strtype": "OBJECT/Disabled",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -420390501,
-                "strtype": "OBJECT/Focused",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -1355739146,
-                "strtype": "OBJECT/Pressed",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -741638121,
-                "strtype": "LABEL/Edited",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -116639200,
-                "strtype": "OBJECT/User_1",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": -99768671,
-                "strtype": "OBJECT/User_2",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 778549701,
-                "strtype": "OBJECT/User_3",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 647292454,
-                "strtype": "OBJECT/User_4",
-                "strval": "False",
-                "InheritedType": 2
-              },
-              {
-                "nid": 1096313565,
-                "strtype": "LABEL/Label",
-                "InheritedType": 1
-              },
-              {
-                "nid": -1743325975,
-                "strtype": "LABEL/Long_mode",
-                "strval": "WRAP",
-                "InheritedType": 3
-              },
-              {
-                "nid": 1032909066,
-                "strtype": "LABEL/Text",
-                "strval": "12:25:45",
-                "InheritedType": 10
-              },
-              {
-                "part": "lv.PART.MAIN",
-                "childs": [
-                  {
-                    "nid": 429319206,
-                    "strtype": "_style/StyleState",
-                    "strval": "DEFAULT",
-                    "childs": [
-                      {
-                        "nid": -419083574,
-                        "strtype": "_style/Text_Color",
-                        "intarray": [
-                          255,
-                          255,
-                          255,
-                          255
-                        ],
-                        "InheritedType": 7
-                      },
-                      {
-                        "nid": -554144720,
-                        "strtype": "_style/Text_Font",
-                        "strval": "montserrat_18",
-                        "InheritedType": 3
-                      }
-                    ],
-                    "InheritedType": 1
-                  }
-                ],
-                "nid": -639564937,
-                "strtype": "LABEL/Style_main",
-                "strval": "lv.PART.MAIN, Text, Rectangle, Pad, Transform",
-                "InheritedType": 11
-              },
-              {
-                "nid": -862205505,
-                "strtype": "LABEL/Recolor",
-                "strval": "False",
-                "InheritedType": 2
-              }
-            ],
-            "saved_objtypeKey": "LABEL",
-            "tree_closed": true
-          },
           {
             "guid": "GUID30269939-954658S162673263",
             "deepid": 764910715,
@@ -5009,7 +4069,7 @@
                           {
                             "nid": 1169484406,
                             "strtype": "CHANGE SCREEN/Fade_mode",
-                            "strval": "FADE_ON",
+                            "strval": "MOVE_LEFT",
                             "InheritedType": 3
                           },
                           {
@@ -6097,7 +5157,7 @@
                           {
                             "nid": 2067765216,
                             "strtype": "CHANGE SCREEN/Fade_mode",
-                            "strval": "FADE_ON",
+                            "strval": "MOVE_LEFT",
                             "InheritedType": 3
                           },
                           {
@@ -9989,7 +9049,7 @@
                     "flags": 34,
                     "strtype": "OBJECT/Size",
                     "intarray": [
-                      93,
+                      91,
                       100
                     ],
                     "InheritedType": 7
@@ -10305,7 +9365,7 @@
                           {
                             "nid": 495822487,
                             "strtype": "CHANGE SCREEN/Fade_mode",
-                            "strval": "FADE_ON",
+                            "strval": "MOVE_LEFT",
                             "InheritedType": 3
                           },
                           {
@@ -11639,7 +10699,7 @@
                 "flags": 17,
                 "strtype": "OBJECT/Position",
                 "intarray": [
-                  80,
+                  77,
                   -49
                 ],
                 "InheritedType": 7
@@ -11649,7 +10709,7 @@
                 "flags": 17,
                 "strtype": "OBJECT/Size",
                 "intarray": [
-                  162,
+                  157,
                   83
                 ],
                 "InheritedType": 7
@@ -12348,7 +11408,7 @@
                           {
                             "nid": 1054988054,
                             "strtype": "CHANGE SCREEN/Fade_mode",
-                            "strval": "FADE_ON",
+                            "strval": "MOVE_LEFT",
                             "InheritedType": 3
                           },
                           {
@@ -13692,8 +12752,8 @@
                 "flags": 17,
                 "strtype": "OBJECT/Size",
                 "intarray": [
-                  157,
-                  87
+                  156,
+                  85
                 ],
                 "InheritedType": 7
               },
@@ -14315,7 +13375,7 @@
                           {
                             "nid": 707835188,
                             "strtype": "CHANGE SCREEN/Fade_mode",
-                            "strval": "FADE_ON",
+                            "strval": "MOVE_LEFT",
                             "InheritedType": 3
                           },
                           {
@@ -14649,7 +13709,7 @@
               {
                 "disabled": false,
                 "nid": 524506946,
-                "strtype": "CONTAINER/EventHandler",
+                "strtype": "_event/EventHandler",
                 "strval": "CLICKED",
                 "childs": [
                   {
@@ -15043,6 +14103,325 @@
             ],
             "saved_objtypeKey": "LABEL",
             "tree_closed": true
+          },
+          {
+            "guid": "GUID69399729-688805S2743264",
+            "deepid": 577585276,
+            "locked": false,
+            "properties": [
+              {
+                "nid": -1248692714,
+                "strtype": "OBJECT/Name",
+                "strval": "clock2",
+                "InheritedType": 10
+              },
+              {
+                "nid": -981824560,
+                "strtype": "OBJECT/Layout",
+                "InheritedType": 1
+              },
+              {
+                "Flow": 0,
+                "Wrap": false,
+                "Reversed": false,
+                "MainAlignment": 0,
+                "CrossAlignment": 0,
+                "TrackAlignment": 0,
+                "LayoutType": 0,
+                "nid": 113875621,
+                "strtype": "OBJECT/Layout_type",
+                "strval": "No_layout",
+                "InheritedType": 13
+              },
+              {
+                "nid": -10969048,
+                "strtype": "OBJECT/Transform",
+                "InheritedType": 1
+              },
+              {
+                "nid": -1192955693,
+                "flags": 17,
+                "strtype": "OBJECT/Position",
+                "intarray": [
+                  104,
+                  -101
+                ],
+                "InheritedType": 7
+              },
+              {
+                "nid": -501889578,
+                "flags": 51,
+                "strtype": "OBJECT/Size",
+                "intarray": [
+                  1,
+                  1
+                ],
+                "InheritedType": 7
+              },
+              {
+                "nid": 1561151740,
+                "strtype": "OBJECT/Align",
+                "strval": "CENTER",
+                "InheritedType": 3
+              },
+              {
+                "nid": 333154815,
+                "flags": 1048576,
+                "strtype": "OBJECT/Flags",
+                "InheritedType": 1
+              },
+              {
+                "nid": -1150735129,
+                "strtype": "OBJECT/Hidden",
+                "strval": "False",
+                "InheritedType": 2
+              },
+              {
+                "nid": -1691273404,
+                "strtype": "OBJECT/Clickable",
+                "strval": "False",
+                "InheritedType": 2
+              },
+              {
+                "nid": 650060504,
+                "strtype": "OBJECT/Checkable",
+                "strval": "False",
+                "InheritedType": 2
+              },
+              {
+                "nid": 677556055,
+                "strtype": "OBJECT/Press_lock",
+                "strval": "True",
+                "InheritedType": 2
+              },
+              {
+                "nid": 1765336062,
+                "strtype": "OBJECT/Click_focusable",
+                "strval": "True",
+                "InheritedType": 2
+              },
+              {
+                "nid": 1050380628,
+                "strtype": "OBJECT/Adv_hittest",
+                "strval": "False",
+                "InheritedType": 2
+              },
+              {
+                "nid": 957471884,
+                "strtype": "OBJECT/Ignore_layout",
+                "strval": "False",
+                "InheritedType": 2
+              },
+              {
+                "nid": -1273877893,
+                "strtype": "OBJECT/Floating",
+                "strval": "False",
+                "InheritedType": 2
+              },
+              {
+                "nid": 918509277,
+                "strtype": "LABEL/Overflow_visible",
+                "strval": "False",
+                "InheritedType": 2
+              },
+              {
+                "nid": -319928140,
+                "strtype": "OBJECT/Flex_in_new_track",
+                "strval": "False",
+                "InheritedType": 2
+              },
+              {
+                "nid": -750902728,
+                "strtype": "OBJECT/Event_bubble",
+                "strval": "False",
+                "InheritedType": 2
+              },
+              {
+                "nid": 121681342,
+                "strtype": "OBJECT/Gesture_bubble",
+                "strval": "True",
+                "InheritedType": 2
+              },
+              {
+                "nid": -242249149,
+                "strtype": "OBJECT/Snappable",
+                "strval": "True",
+                "InheritedType": 2
+              },
+              {
+                "nid": -1561035035,
+                "strtype": "OBJECT/Scrollable",
+                "strval": "True",
+                "InheritedType": 2
+              },
+              {
+                "nid": -88618750,
+                "strtype": "OBJECT/Scroll_elastic",
+                "strval": "True",
+                "InheritedType": 2
+              },
+              {
+                "nid": -438360981,
+                "strtype": "OBJECT/Scroll_momentum",
+                "strval": "True",
+                "InheritedType": 2
+              },
+              {
+                "nid": -1327961085,
+                "strtype": "OBJECT/Scroll_on_focus",
+                "strval": "False",
+                "InheritedType": 2
+              },
+              {
+                "nid": 579340560,
+                "strtype": "OBJECT/Scroll_chain",
+                "strval": "True",
+                "InheritedType": 2
+              },
+              {
+                "nid": 539727663,
+                "strtype": "LABEL/Scroll_with_arrow",
+                "strval": "False",
+                "InheritedType": 2
+              },
+              {
+                "nid": -1594865268,
+                "strtype": "OBJECT/Scroll_one",
+                "strval": "False",
+                "InheritedType": 2
+              },
+              {
+                "nid": -443402808,
+                "strtype": "OBJECT/Scrollbar_mode",
+                "strval": "AUTO",
+                "InheritedType": 3
+              },
+              {
+                "nid": -1770246879,
+                "strtype": "OBJECT/Scroll_direction",
+                "strval": "ALL",
+                "InheritedType": 3
+              },
+              {
+                "nid": -1177790236,
+                "flags": 1048576,
+                "strtype": "OBJECT/States",
+                "InheritedType": 1
+              },
+              {
+                "nid": -658422930,
+                "strtype": "OBJECT/Checked",
+                "strval": "False",
+                "InheritedType": 2
+              },
+              {
+                "nid": 1005766953,
+                "strtype": "OBJECT/Disabled",
+                "strval": "False",
+                "InheritedType": 2
+              },
+              {
+                "nid": -1705355858,
+                "strtype": "OBJECT/Focused",
+                "strval": "False",
+                "InheritedType": 2
+              },
+              {
+                "nid": 1321925189,
+                "strtype": "OBJECT/Pressed",
+                "strval": "False",
+                "InheritedType": 2
+              },
+              {
+                "nid": -810719259,
+                "strtype": "LABEL/Edited",
+                "strval": "False",
+                "InheritedType": 2
+              },
+              {
+                "nid": -385986260,
+                "strtype": "OBJECT/User_1",
+                "strval": "False",
+                "InheritedType": 2
+              },
+              {
+                "nid": -1968449351,
+                "strtype": "OBJECT/User_2",
+                "strval": "False",
+                "InheritedType": 2
+              },
+              {
+                "nid": -91454286,
+                "strtype": "OBJECT/User_3",
+                "strval": "False",
+                "InheritedType": 2
+              },
+              {
+                "nid": -2008845743,
+                "strtype": "OBJECT/User_4",
+                "strval": "False",
+                "InheritedType": 2
+              },
+              {
+                "nid": 891647845,
+                "strtype": "LABEL/Label",
+                "InheritedType": 1
+              },
+              {
+                "nid": -990804217,
+                "strtype": "LABEL/Long_mode",
+                "strval": "WRAP",
+                "InheritedType": 3
+              },
+              {
+                "nid": 370239241,
+                "strtype": "LABEL/Text",
+                "strval": "12:25:45",
+                "InheritedType": 10
+              },
+              {
+                "part": "lv.PART.MAIN",
+                "childs": [
+                  {
+                    "nid": 773535988,
+                    "strtype": "_style/StyleState",
+                    "strval": "DEFAULT",
+                    "childs": [
+                      {
+                        "nid": 1188286947,
+                        "strtype": "_style/Text_Color",
+                        "intarray": [
+                          255,
+                          255,
+                          255,
+                          255
+                        ],
+                        "InheritedType": 7
+                      },
+                      {
+                        "nid": 1223433045,
+                        "strtype": "_style/Text_Font",
+                        "strval": "clock24",
+                        "InheritedType": 3
+                      }
+                    ],
+                    "InheritedType": 1
+                  }
+                ],
+                "nid": -1067998186,
+                "strtype": "LABEL/Style_main",
+                "strval": "lv.PART.MAIN, Text, Rectangle, Pad, Transform",
+                "InheritedType": 11
+              },
+              {
+                "nid": -1089066518,
+                "strtype": "LABEL/Recolor",
+                "strval": "False",
+                "InheritedType": 2
+              }
+            ],
+            "saved_objtypeKey": "LABEL",
+            "tree_closed": true
           }
         ],
         "isPage": true,
@@ -15281,6 +14660,83 @@
             "strtype": "SCREEN/Style_scrollbar",
             "strval": "lv.PART.SCROLLBAR, Rectangle, Pad",
             "InheritedType": 11
+          },
+          {
+            "disabled": false,
+            "nid": -1984925589,
+            "strtype": "_event/EventHandler",
+            "strval": "SCREEN_LOADED",
+            "childs": [
+              {
+                "nid": 770789003,
+                "strtype": "_event/name",
+                "strval": "screen3idle",
+                "InheritedType": 10
+              },
+              {
+                "nid": -578819183,
+                "strtype": "_event/condition_C",
+                "strval": "",
+                "InheritedType": 10
+              },
+              {
+                "nid": -838936132,
+                "strtype": "_event/condition_P",
+                "strval": "",
+                "InheritedType": 10
+              },
+              {
+                "nid": 2023473580,
+                "strtype": "_event/action",
+                "strval": "CHANGE SCREEN",
+                "childs": [
+                  {
+                    "nid": -95962592,
+                    "strtype": "CHANGE SCREEN/Name",
+                    "strval": "CHANGE SCREEN",
+                    "InheritedType": 10
+                  },
+                  {
+                    "nid": 1609018609,
+                    "strtype": "CHANGE SCREEN/Call",
+                    "strval": "ChangeScreen( <{Screen_to}>, lv.SCR_LOAD_ANIM.<{Fade_mode}>, <{Speed}>, <{Delay}>)",
+                    "InheritedType": 10
+                  },
+                  {
+                    "nid": 1667098851,
+                    "strtype": "CHANGE SCREEN/CallC",
+                    "strval": "_ui_screen_change( &<{Screen_to}>, LV_SCR_LOAD_ANIM_<{Fade_mode}>, <{Speed}>, <{Delay}>, &<{Screen_to}>_screen_init);",
+                    "InheritedType": 10
+                  },
+                  {
+                    "nid": -1205892832,
+                    "strtype": "CHANGE SCREEN/Screen_to",
+                    "strval": "GUID88877169-940377S326773263",
+                    "InheritedType": 9
+                  },
+                  {
+                    "nid": 540175407,
+                    "strtype": "CHANGE SCREEN/Fade_mode",
+                    "strval": "FADE_ON",
+                    "InheritedType": 3
+                  },
+                  {
+                    "nid": -1879466172,
+                    "strtype": "CHANGE SCREEN/Speed",
+                    "integer": 1000,
+                    "InheritedType": 6
+                  },
+                  {
+                    "nid": 482767296,
+                    "strtype": "CHANGE SCREEN/Delay",
+                    "integer": 10000,
+                    "InheritedType": 6
+                  }
+                ],
+                "InheritedType": 10
+              }
+            ],
+            "InheritedType": 4
           }
         ],
         "saved_objtypeKey": "SCREEN"
@@ -17408,7 +16864,7 @@
                       {
                         "nid": 1573977677,
                         "strtype": "CHANGE SCREEN/Fade_mode",
-                        "strval": "FADE_ON",
+                        "strval": "MOVE_RIGHT",
                         "InheritedType": 3
                       },
                       {
@@ -17986,429 +17442,6 @@
             "strtype": "SCREEN/Style_scrollbar",
             "strval": "lv.PART.SCROLLBAR, Rectangle, Pad",
             "InheritedType": 11
-          },
-          {
-            "disabled": false,
-            "nid": -907194069,
-            "strtype": "_event/EventHandler",
-            "strval": "SCREEN_LOADED",
-            "childs": [
-              {
-                "nid": 2029290609,
-                "strtype": "_event/name",
-                "strval": "Event3",
-                "InheritedType": 10
-              },
-              {
-                "nid": -1029111311,
-                "strtype": "_event/condition_C",
-                "strval": "",
-                "InheritedType": 10
-              },
-              {
-                "nid": -684523110,
-                "strtype": "_event/condition_P",
-                "strval": "",
-                "InheritedType": 10
-              },
-              {
-                "nid": -1700731829,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 158740031,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1302610792,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "blink_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -992584200,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "blink",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 2130898510,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": 623211391,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": 546996996,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -825499207,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": 334721427,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 186381717,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -416927078,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "blink_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 76318614,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "blink",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 94840462,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": -1461604607,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": -1789515797,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 439104222,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": -1030949459,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 1855174381,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1620961503,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "open_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -339000228,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "open",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": -2063759073,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": 2135878541,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "integer": 1000,
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": 485571149,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 826183703,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": -564898802,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 902966430,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -369610419,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "open_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1183116307,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "open",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 1593666460,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": -1290766791,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "integer": 1000,
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": -429384015,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1885679085,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": -1829299747,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 1507904725,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 223453749,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "blinkx_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1743495608,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "blinkx",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 859327729,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": -1024938269,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": -1977821215,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1569158147,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": -1198908517,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": -919794662,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 397828207,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "blinkx_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 244471030,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "blinkx",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": -228983645,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": 1281281823,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": -52640276,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 967365812,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": -1789943500,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 846589042,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1173310189,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "openx_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1065762544,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "openx",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 115453574,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": 1702818089,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "integer": 1000,
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": 163323652,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1202631905,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": -1729471262,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 1750233569,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 278455725,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "openx_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 505911174,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "openx",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 1856034157,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": 637762733,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "integer": 1000,
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": -1191788520,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -2121983529,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              }
-            ],
-            "InheritedType": 4
           }
         ],
         "saved_objtypeKey": "SCREEN"
@@ -20536,7 +19569,7 @@
                       {
                         "nid": 898662021,
                         "strtype": "CHANGE SCREEN/Fade_mode",
-                        "strval": "FADE_ON",
+                        "strval": "MOVE_RIGHT",
                         "InheritedType": 3
                       },
                       {
@@ -21114,429 +20147,6 @@
             "strtype": "SCREEN/Style_scrollbar",
             "strval": "lv.PART.SCROLLBAR, Rectangle, Pad",
             "InheritedType": 11
-          },
-          {
-            "disabled": false,
-            "nid": 1133629342,
-            "strtype": "_event/EventHandler",
-            "strval": "SCREEN_LOADED",
-            "childs": [
-              {
-                "nid": 514385953,
-                "strtype": "_event/name",
-                "strval": "Event3",
-                "InheritedType": 10
-              },
-              {
-                "nid": 451010081,
-                "strtype": "_event/condition_C",
-                "strval": "",
-                "InheritedType": 10
-              },
-              {
-                "nid": -1473079410,
-                "strtype": "_event/condition_P",
-                "strval": "",
-                "InheritedType": 10
-              },
-              {
-                "nid": -1577940481,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": -1970159343,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1662882203,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "blink_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 525695904,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "blink",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 1715321654,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": -1774382195,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": 209029500,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1276515792,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": 1422519280,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 52595385,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 2076385417,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "blink_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 15174566,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "blink",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 1382661512,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": 478167598,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": -1701656357,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -108945618,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": -1233651040,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 972260681,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 463079313,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "open_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 91316574,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "open",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": -1794388409,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": 1561954919,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "integer": 1000,
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": 1997456607,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1027663496,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": 2059713486,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": -1712862108,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 605216501,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "open_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1148409052,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "open",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": -497495314,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": -476333029,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "integer": 1000,
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": 116050300,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1349154688,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": -965816034,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": -1848530439,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1393989450,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "blinkx_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1632296360,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "blinkx",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": -510302173,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": -1610022371,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": -982418238,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 154458868,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": 55321682,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 1451153954,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 294254192,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "blinkx_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 109418914,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "blinkx",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 1646921978,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": -884610381,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": -746792231,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1110502350,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": -1159624882,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 1211783055,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 740124730,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "openx_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1317392597,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "openx",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 1367248157,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": -2131267813,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "integer": 1000,
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": -1549874444,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 212800752,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": -876278478,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 1293975931,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -377568691,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "openx_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 246735484,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "openx",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 1558767110,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": -381261208,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "integer": 1000,
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": -849642309,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 578930891,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              }
-            ],
-            "InheritedType": 4
           }
         ],
         "saved_objtypeKey": "SCREEN"
@@ -23664,7 +22274,7 @@
                       {
                         "nid": 2128870595,
                         "strtype": "CHANGE SCREEN/Fade_mode",
-                        "strval": "FADE_ON",
+                        "strval": "MOVE_RIGHT",
                         "InheritedType": 3
                       },
                       {
@@ -24242,429 +22852,6 @@
             "strtype": "SCREEN/Style_scrollbar",
             "strval": "lv.PART.SCROLLBAR, Rectangle, Pad",
             "InheritedType": 11
-          },
-          {
-            "disabled": false,
-            "nid": -1104230105,
-            "strtype": "_event/EventHandler",
-            "strval": "SCREEN_LOADED",
-            "childs": [
-              {
-                "nid": 943249252,
-                "strtype": "_event/name",
-                "strval": "Event3",
-                "InheritedType": 10
-              },
-              {
-                "nid": 1334735937,
-                "strtype": "_event/condition_C",
-                "strval": "",
-                "InheritedType": 10
-              },
-              {
-                "nid": 1356169003,
-                "strtype": "_event/condition_P",
-                "strval": "",
-                "InheritedType": 10
-              },
-              {
-                "nid": 999950165,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": -2026235106,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1708453850,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "blink_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 242740320,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "blink",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": -185595486,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": -23232435,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": -319480835,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -2009967564,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": 1531524846,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 1068680226,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -797678287,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "blink_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -594017233,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "blink",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 1843902020,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": -2082358888,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": -828560668,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1187640954,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": 1283489109,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 1808216452,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -397332813,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "open_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -2119194425,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "open",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 317941022,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": 1743735169,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "integer": 1000,
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": -1713497875,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1421399628,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": -983956339,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 592954955,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1977797358,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "open_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1978261186,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "open",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 1652766060,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": 536475538,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "integer": 1000,
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": 524991725,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1977422666,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": -2004762808,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": -981539257,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1906640034,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "blinkx_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -186844885,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "blinkx",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 125516169,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": -674429623,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": -1138698465,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -435616837,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": -1630547230,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": -867028306,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1832542831,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "blinkx_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1434161402,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "blinkx",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": -2147261727,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": -166740215,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": 12530106,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 2131677583,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": -2117330111,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": -395051154,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 360741880,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "openx_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1232936016,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "openx",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 524289903,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": -1948426643,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "integer": 1000,
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": 439266168,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 129466016,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": -1488456932,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": -882586505,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 982143191,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "openx_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 635477292,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "openx",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 102423408,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": 1769742908,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "integer": 1000,
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": 1572865549,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1546892821,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              }
-            ],
-            "InheritedType": 4
           }
         ],
         "saved_objtypeKey": "SCREEN"
@@ -26792,7 +24979,7 @@
                       {
                         "nid": 444243302,
                         "strtype": "CHANGE SCREEN/Fade_mode",
-                        "strval": "FADE_ON",
+                        "strval": "MOVE_RIGHT",
                         "InheritedType": 3
                       },
                       {
@@ -27370,429 +25557,6 @@
             "strtype": "SCREEN/Style_scrollbar",
             "strval": "lv.PART.SCROLLBAR, Rectangle, Pad",
             "InheritedType": 11
-          },
-          {
-            "disabled": false,
-            "nid": -872963012,
-            "strtype": "_event/EventHandler",
-            "strval": "SCREEN_LOADED",
-            "childs": [
-              {
-                "nid": 1124609407,
-                "strtype": "_event/name",
-                "strval": "Event3",
-                "InheritedType": 10
-              },
-              {
-                "nid": -190841957,
-                "strtype": "_event/condition_C",
-                "strval": "",
-                "InheritedType": 10
-              },
-              {
-                "nid": -2015325463,
-                "strtype": "_event/condition_P",
-                "strval": "",
-                "InheritedType": 10
-              },
-              {
-                "nid": 967092865,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 1810931495,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1784509884,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "blink_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -835826886,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "blink",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": -1012292796,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": -792011539,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": -570800291,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1070993893,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": 2097149166,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 1477435599,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 925002868,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "blink_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -261501167,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "blink",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 877300519,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": 1778444153,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": -1939363938,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1523364332,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": -278179861,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 1858205441,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 2117177765,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "open_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1143442063,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "open",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": -254945370,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": 134939018,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "integer": 1000,
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": -447488796,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1700376244,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": 155666853,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": -1586059444,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1643280561,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "open_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1405777575,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "open",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": -1682756681,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": -355765425,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "integer": 1000,
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": -1945355307,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1067887782,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": 2097523875,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 25192099,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 2076416410,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "blinkx_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1231973086,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "blinkx",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": -263701135,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": 1184494515,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": -1737193534,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1348721279,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": -1000594036,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": -779230591,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 723457436,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "blinkx_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -236502221,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "blinkx",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": -1238008428,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": 453597452,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": -1126739012,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 2076056444,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": 1447248918,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": -1467363184,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1812361378,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "openx_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1411335742,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "openx",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 1610288720,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": 1446647854,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "integer": 1000,
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": 272536381,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1875278850,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": 492013132,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": -1753783439,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1185453467,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "openx_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 40732634,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "openx",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 813693242,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": -2043829517,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "integer": 1000,
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": -1818674200,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1023059371,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              }
-            ],
-            "InheritedType": 4
           }
         ],
         "saved_objtypeKey": "SCREEN"
@@ -29920,7 +27684,7 @@
                       {
                         "nid": -859762573,
                         "strtype": "CHANGE SCREEN/Fade_mode",
-                        "strval": "FADE_ON",
+                        "strval": "MOVE_RIGHT",
                         "InheritedType": 3
                       },
                       {
@@ -30498,429 +28262,6 @@
             "strtype": "SCREEN/Style_scrollbar",
             "strval": "lv.PART.SCROLLBAR, Rectangle, Pad",
             "InheritedType": 11
-          },
-          {
-            "disabled": false,
-            "nid": 1466228121,
-            "strtype": "_event/EventHandler",
-            "strval": "SCREEN_LOADED",
-            "childs": [
-              {
-                "nid": -629064075,
-                "strtype": "_event/name",
-                "strval": "Event3",
-                "InheritedType": 10
-              },
-              {
-                "nid": -1884666184,
-                "strtype": "_event/condition_C",
-                "strval": "",
-                "InheritedType": 10
-              },
-              {
-                "nid": 344057594,
-                "strtype": "_event/condition_P",
-                "strval": "",
-                "InheritedType": 10
-              },
-              {
-                "nid": 1849764369,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 870154096,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1950287879,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "blink_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 354270102,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "blink",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": -1076380747,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": -1478848192,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": 767154059,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -840147703,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": -320832468,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 2061705327,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1556308124,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "blink_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -846233764,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "blink",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": -155886214,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": -190202891,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": 1816275688,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1058202986,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": 1914521748,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 1684215850,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1390098287,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "open_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -221840292,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "open",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 1493899668,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": -243575615,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "integer": 1000,
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": 1348803203,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 90754237,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": -48311476,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 1735012989,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -2085484693,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "open_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -283489786,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "open",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": -177725202,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": -2066058694,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "integer": 1000,
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": 1447206688,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 1364735004,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": -1376379529,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 2064976216,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1420323453,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "blinkx_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 974296578,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "blinkx",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 12031949,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": 683740358,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": 2014938178,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 332705706,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": 1360836470,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": -1153819,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 599717860,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "blinkx_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 504420970,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "blinkx",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 199347904,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": 1551190963,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": 1863230121,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 528126943,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": -2073646497,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": -2009162145,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -2126163641,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "openx_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 2013569403,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "openx",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": -1916295504,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": 372346203,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "integer": 1000,
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": 343523894,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -517751479,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              },
-              {
-                "nid": -910540741,
-                "strtype": "_event/action",
-                "strval": "PLAY ANIMATION",
-                "childs": [
-                  {
-                    "nid": 1495841735,
-                    "strtype": "PLAY ANIMATION/Name",
-                    "strval": "PLAY ANIMATION",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": 942946742,
-                    "strtype": "PLAY ANIMATION/FunctionName",
-                    "strval": "openx_Animation",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -928872019,
-                    "strtype": "PLAY ANIMATION/Animation",
-                    "strval": "openx",
-                    "InheritedType": 8
-                  },
-                  {
-                    "nid": 525161650,
-                    "strtype": "PLAY ANIMATION/Target",
-                    "strval": "-",
-                    "InheritedType": 9
-                  },
-                  {
-                    "nid": 151476624,
-                    "strtype": "PLAY ANIMATION/Delay",
-                    "integer": 1000,
-                    "InheritedType": 6
-                  },
-                  {
-                    "nid": -850831806,
-                    "strtype": "PLAY ANIMATION/Call",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>)",
-                    "InheritedType": 10
-                  },
-                  {
-                    "nid": -1184449676,
-                    "strtype": "PLAY ANIMATION/CallC",
-                    "strval": "<{FunctionName}>(<{Target}>, <{Delay}>);",
-                    "InheritedType": 10
-                  }
-                ],
-                "InheritedType": 10
-              }
-            ],
-            "InheritedType": 4
           }
         ],
         "saved_objtypeKey": "SCREEN"
@@ -32155,7 +29496,7 @@
     "theme_color2": 0,
     "uiExportFolderPath": "C:\\Users\\Akshaj Rai\\Documents\\GitHub\\airowl\\src\\m5stack\\ui",
     "projectExportFolderPath": "C:\\Users\\Akshaj Rai\\Documents\\GitHub\\airowl\\squareline\\projects\\ui_square_line",
-    "backup_cnt": 55,
+    "backup_cnt": 86,
     "autosave_cnt": 0,
     "lvgl_version": "8.3.6",
     "callfuncsexport": "DONT_EXPORT",

@@ -34,10 +34,10 @@ void update_time()
     // Update time label
     char time_buf[9];
     strftime(time_buf, sizeof(time_buf), "%H:%M:%S", &timeinfo);
-    lv_label_set_text(ui_clock, time_buf);
+    lv_label_set_text(ui_clock2, time_buf);
 
     // Update date label
     char date_buf[24];
     strftime(date_buf, sizeof(date_buf), "%a %b %d %Y", &timeinfo);
-    lv_label_set_text(ui_date, date_buf);
+   // lv_label_set_text(ui_date, date_buf);
 }
