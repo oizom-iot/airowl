@@ -6,77 +6,67 @@
 #include "ui/ui.h"
 
 #define MAXBUF_REQUIREMENT 48
+#define CHART_DATA_LENGTH 15
+#define DATA_FREQ 5
 
 #if (defined(I2C_BUFFER_LENGTH) &&                 \
      (I2C_BUFFER_LENGTH >= MAXBUF_REQUIREMENT)) || \
     (defined(BUFFER_LENGTH) && BUFFER_LENGTH >= MAXBUF_REQUIREMENT)
-#define USE_PRODUCT_INFO
 #endif
 
+typedef struct{
+    float pm1 = 0;
+    float pm25 = 0;
+    float pm10 = 0;
+    float pm4 = 0;
+    float tvoc = 0;
+    int pm1_max = 0;
+    int pm25_max = 0;
+    int pm10_max = 0;
+    int pm4_max = 0;
+    int tvoc_max = 0;
+    int count = 0;
+} Sensor_t;
+
 SensirionI2CSen5x sen5x;
+Sensor_t sensor_data;
 
-void printModuleVersions() {
-    uint16_t error;
-    char errorMessage[256];
+lv_chart_series_t * ui_PM1chart_series_1 = { 0 };
+static lv_coord_t ui_PM1chart_series_1_array[CHART_DATA_LENGTH] = { 9, 10, 12, 9, 12, 24, 8, 10, 10, 39, 11, 14, 15, 16, 17 };
+        
+lv_chart_series_t * ui_PM25chart_series_1 = { 0 };
+static lv_coord_t ui_PM25chart_series_1_array[CHART_DATA_LENGTH] = { 9, 10, 12, 9, 12, 24, 8, 10, 10, 39, 11, 14, 15, 16, 17 };
 
-    unsigned char productName[32];
-    uint8_t productNameSize = 32;
+lv_chart_series_t * ui_PM4chart_series_1 = { 0 };
+static lv_coord_t ui_PM4chart_series_1_array[CHART_DATA_LENGTH] = { 9, 10, 12, 9, 12, 24, 8, 10, 10, 39, 11, 14, 15, 16, 17 };
 
-    error = sen5x.getProductName(productName, productNameSize);
+lv_chart_series_t * ui_PM10chart_series_1 = { 0 };
+static lv_coord_t ui_PM10chart_series_1_array[CHART_DATA_LENGTH] = { 9, 10, 12, 9, 12, 24, 8, 10, 10, 39, 11, 14, 15, 16, 17 };
 
-    if (error) {
-        Serial.print("Error trying to execute getProductName(): ");
-        errorToString(error, errorMessage, 256);
-        Serial.println(errorMessage);
-    } else {
-        Serial.print("ProductName:");
-        Serial.println((char*)productName);
-    }
+lv_chart_series_t * ui_TVOCchart_series_1 = { 0 };
+static lv_coord_t ui_TVOCchart_series_1_array[CHART_DATA_LENGTH] = { 9, 10, 12, 9, 12, 24, 8, 10, 10, 39, 11, 14, 15, 16, 17 };
 
-    uint8_t firmwareMajor;
-    uint8_t firmwareMinor;
-    bool firmwareDebug;
-    uint8_t hardwareMajor;
-    uint8_t hardwareMinor;
-    uint8_t protocolMajor;
-    uint8_t protocolMinor;
+void setupCharts()
+{
+    ui_PM1chart_series_1 = lv_chart_add_series(ui_PM1chart, lv_color_hex(0x086003), LV_CHART_AXIS_PRIMARY_Y);
+    lv_chart_set_ext_y_array(ui_PM1chart, ui_PM1chart_series_1, ui_PM1chart_series_1_array);
+    lv_chart_set_range( ui_PM1chart, LV_CHART_AXIS_PRIMARY_Y, 0, 50);
 
-    error = sen5x.getVersion(firmwareMajor, firmwareMinor, firmwareDebug,
-                             hardwareMajor, hardwareMinor, protocolMajor,
-                             protocolMinor);
-    if (error) {
-        Serial.print("Error trying to execute getVersion(): ");
-        errorToString(error, errorMessage, 256);
-        Serial.println(errorMessage);
-    } else {
-        Serial.print("Firmware: ");
-        Serial.print(firmwareMajor);
-        Serial.print(".");
-        Serial.print(firmwareMinor);
-        Serial.print(", ");
+    ui_PM25chart_series_1 = lv_chart_add_series(ui_PM25chart, lv_color_hex(0x086003), LV_CHART_AXIS_PRIMARY_Y);
+    lv_chart_set_ext_y_array(ui_PM25chart, ui_PM25chart_series_1, ui_PM25chart_series_1_array);
+    lv_chart_set_range( ui_PM25chart, LV_CHART_AXIS_PRIMARY_Y, 0, 50);
 
-        Serial.print("Hardware: ");
-        Serial.print(hardwareMajor);
-        Serial.print(".");
-        Serial.println(hardwareMinor);
-    }
-}
+    ui_PM10chart_series_1 = lv_chart_add_series(ui_PM10chart, lv_color_hex(0x086003), LV_CHART_AXIS_PRIMARY_Y);
+    lv_chart_set_ext_y_array(ui_PM10chart, ui_PM10chart_series_1, ui_PM10chart_series_1_array);
+    lv_chart_set_range( ui_PM10chart, LV_CHART_AXIS_PRIMARY_Y, 0, 50);
 
-void printSerialNumber() {
-    uint16_t error;
-    char errorMessage[256];
-    unsigned char serialNumber[32];
-    uint8_t serialNumberSize = 32;
+    ui_PM4chart_series_1 = lv_chart_add_series(ui_PM4chart, lv_color_hex(0x086003), LV_CHART_AXIS_PRIMARY_Y);
+    lv_chart_set_ext_y_array(ui_PM4chart, ui_PM4chart_series_1, ui_PM4chart_series_1_array);
+    lv_chart_set_range( ui_PM4chart, LV_CHART_AXIS_PRIMARY_Y, 0, 50);
 
-    error = sen5x.getSerialNumber(serialNumber, serialNumberSize);
-    if (error) {
-        Serial.print("Error trying to execute getSerialNumber(): ");
-        errorToString(error, errorMessage, 256);
-        Serial.println(errorMessage);
-    } else {
-        Serial.print("SerialNumber:");
-        Serial.println((char*)serialNumber);
-    }
+    ui_TVOCchart_series_1 = lv_chart_add_series(ui_TVOCchart, lv_color_hex(0x086003), LV_CHART_AXIS_PRIMARY_Y);
+    lv_chart_set_ext_y_array(ui_TVOCchart, ui_TVOCchart_series_1, ui_TVOCchart_series_1_array);
+    lv_chart_set_range( ui_TVOCchart, LV_CHART_AXIS_PRIMARY_Y, 0, 100);
 }
 
 void sensorData(void *params)
@@ -92,12 +82,6 @@ void sensorData(void *params)
           errorToString(error, errorMessage, 256);
           Serial.println(errorMessage);
       }
-
-  // Print SEN55 module information if i2c buffers are large enough
-  #ifdef USE_PRODUCT_INFO
-      printSerialNumber();
-      printModuleVersions();
-  #endif
 
       float tempOffset = 0.0;
       error = sen5x.setTemperatureOffsetSimple(tempOffset);
@@ -119,24 +103,26 @@ void sensorData(void *params)
           Serial.println(errorMessage);
       }
 
+      setupCharts();
+
   while(1)
   {
     uint16_t error;
     char errorMessage[256];
 
     // Read Measurement
-    float massConcentrationPm1p0;
-    float massConcentrationPm2p5;
-    float massConcentrationPm4p0;
-    float massConcentrationPm10p0;
-    float ambientHumidity;
-    float ambientTemperature;
+    float t_pm1;
+    float t_pm25;
+    float t_pm4;
+    float t_pm10;
+    float t_hum;
+    float t_temp;
     float vocIndex;
     float noxIndex;
 
     error = sen5x.readMeasuredValues(
-        massConcentrationPm1p0, massConcentrationPm2p5, massConcentrationPm4p0,
-        massConcentrationPm10p0, ambientHumidity, ambientTemperature, vocIndex,
+        t_pm1, t_pm25, t_pm4,
+        t_pm10, t_hum, t_temp, vocIndex,
         noxIndex);
 
     if (error) {
@@ -144,67 +130,125 @@ void sensorData(void *params)
         errorToString(error, errorMessage, 256);
         Serial.println(errorMessage);
     } else {
-        char pm1buffer[6] = {0};
-        dtostrf(massConcentrationPm1p0, 6, 1, pm1buffer);
-        lv_label_set_text(ui_pm1label, pm1buffer);
-        Serial.print("PM1: ");
-        Serial.println(massConcentrationPm1p0);
         
-        char pm2buffer[6] = {0};
-        dtostrf(massConcentrationPm2p5, 6, 1, pm2buffer);
-        lv_label_set_text(ui_pm25label, pm2buffer);
-        Serial.print("PM2.5: ");
-        Serial.println(massConcentrationPm2p5);
+        sensor_data.pm1 += t_pm1;
+        sensor_data.pm25 += t_pm25;
+        sensor_data.pm10 += t_pm10;
+        sensor_data.pm4 += t_pm4;
+        sensor_data.count++;
+
+        char pm1buffer[6] = {0};
+        dtostrf(t_pm1, 6, 1, pm1buffer);
+        lv_label_set_text(ui_pm1label, pm1buffer);
+
+        char pm25buffer[6] = {0};
+        dtostrf(t_pm25, 6, 1, pm25buffer);
+        lv_label_set_text(ui_pm25label, pm25buffer);
 
         char pm4buffer[6] = {0};
-        dtostrf(massConcentrationPm4p0, 6, 1, pm4buffer);
+        dtostrf(t_pm4, 6, 1, pm4buffer);
         lv_label_set_text(ui_pm4label, pm4buffer);
-        Serial.print("PM4.0: ");
-        Serial.println(massConcentrationPm4p0);
 
         char pm10buffer[6] = {0};
-        dtostrf(massConcentrationPm10p0, 6, 1, pm10buffer);
+        dtostrf(t_pm10, 6, 1, pm10buffer);
         lv_label_set_text(ui_pm10label, pm10buffer);
-        Serial.print("PM10: ");
-        Serial.println(massConcentrationPm10p0);
 
-        // lv_chart_set_ext_y_array(ui_Chart3, ui_Chart3_series_1, array1);
-        
-        char humbuffer[4] = {0};
-        Serial.print("HUM: ");
-        if (isnan(ambientHumidity)) {
-            Serial.println("n/a");
-        } else {
-            dtostrf(ambientHumidity, 4, 1, humbuffer);
-            lv_label_set_text(ui_RHlabel, humbuffer);
-            Serial.println(ambientHumidity);
-        }
-
-        char tempbuffer[4] = {0};
-        Serial.print("TEMP: ");
-        if (isnan(ambientTemperature)) {
-            Serial.println("n/a");
-        } else {
-            dtostrf(ambientTemperature, 4, 1, tempbuffer);
-            lv_label_set_text(ui_templabel, tempbuffer);
-            Serial.println(ambientTemperature);
-        }     
-
-        char vocbuffer[6] = {0};
-        Serial.print("Voc: ");
+        char tvocbuffer[6] = {0};
         if (isnan(vocIndex)) {
             Serial.println("n/a");
         } else {
-            dtostrf(vocIndex, 6, 1, vocbuffer);
-            lv_label_set_text(ui_tvoclabel, vocbuffer);
-            Serial.println(vocIndex);
+            sensor_data.tvoc += vocIndex;
+            dtostrf(vocIndex, 6, 1, tvocbuffer);
+            lv_label_set_text(ui_tvoclabel, tvocbuffer);
         }
-        Serial.println("--------------");
+
+        char humbuffer[4] = {0};
+        if (isnan(t_hum)) {
+            Serial.println("n/a");
+        } else {
+            dtostrf(t_hum, 4, 1, humbuffer);
+            lv_label_set_text(ui_RHlabel, humbuffer);
+        }
+
+        char tempbuffer[4] = {0};
+        if (isnan(t_temp)) {
+            Serial.println("n/a");
+        } else {
+            dtostrf(t_temp, 4, 1, tempbuffer);
+            lv_label_set_text(ui_templabel, tempbuffer);
+        } 
+
+        if(sensor_data.count == DATA_FREQ)
+        {
+
+            //shift the other values to the left
+            memcpy(ui_PM1chart_series_1_array, ui_PM1chart_series_1_array + 1, (CHART_DATA_LENGTH - 1)*sizeof(lv_coord_t));
+            if(sensor_data.pm1_max < (sensor_data.pm1 / sensor_data.count))
+            {
+                sensor_data.pm1_max = int(sensor_data.pm1 / sensor_data.count);
+                if(sensor_data.pm1_max > 50)
+                    lv_chart_set_range( ui_PM1chart, LV_CHART_AXIS_PRIMARY_Y, 0, sensor_data.pm1_max);
+            }
+            //Insert new value 
+            ui_PM1chart_series_1_array[CHART_DATA_LENGTH - 1] = (uint16_t) (sensor_data.pm1 / sensor_data.count);
+            lv_chart_set_ext_y_array(ui_PM1chart, ui_PM1chart_series_1, ui_PM1chart_series_1_array);
+
+            //shift the other values to the left
+            memcpy(ui_PM25chart_series_1_array, ui_PM25chart_series_1_array + 1, (CHART_DATA_LENGTH - 1)*sizeof(lv_coord_t));
+            if(sensor_data.pm25_max < (sensor_data.pm25 / sensor_data.count))
+            {
+                sensor_data.pm25_max = int(sensor_data.pm25 / sensor_data.count);
+                if(sensor_data.pm25_max > 50)
+                    lv_chart_set_range( ui_PM25chart, LV_CHART_AXIS_PRIMARY_Y, 0, sensor_data.pm25_max);
+            }
+            //Insert new value 
+            ui_PM25chart_series_1_array[CHART_DATA_LENGTH - 1] = (uint16_t) (sensor_data.pm25 / sensor_data.count);
+            lv_chart_set_ext_y_array(ui_PM25chart, ui_PM25chart_series_1, ui_PM25chart_series_1_array);
+
+            //shift the other values to the left
+            memcpy(ui_PM10chart_series_1_array, ui_PM10chart_series_1_array + 1, (CHART_DATA_LENGTH - 1)*sizeof(lv_coord_t));
+            if(sensor_data.pm10_max < (sensor_data.pm10 / sensor_data.count))
+            {
+                sensor_data.pm10_max = int(sensor_data.pm10 / sensor_data.count);
+                if(sensor_data.pm10_max > 50)
+                    lv_chart_set_range( ui_PM10chart, LV_CHART_AXIS_PRIMARY_Y, 0, sensor_data.pm10_max);
+            }
+            //Insert new value 
+            ui_PM10chart_series_1_array[CHART_DATA_LENGTH - 1] = (uint16_t) (sensor_data.pm10 / sensor_data.count);
+            lv_chart_set_ext_y_array(ui_PM10chart, ui_PM10chart_series_1, ui_PM10chart_series_1_array);
+
+            //shift the other values to the left
+            memcpy(ui_PM4chart_series_1_array, ui_PM4chart_series_1_array + 1, (CHART_DATA_LENGTH - 1)*sizeof(lv_coord_t));
+            if(sensor_data.pm4_max < (sensor_data.pm4 / sensor_data.count))
+            {
+                sensor_data.pm4_max = int(sensor_data.pm4 / sensor_data.count);
+                if(sensor_data.pm4_max > 50)
+                    lv_chart_set_range( ui_PM4chart, LV_CHART_AXIS_PRIMARY_Y, 0, sensor_data.pm4_max);
+            }
+            //Insert new value 
+            ui_PM4chart_series_1_array[CHART_DATA_LENGTH - 1] = (uint16_t) (sensor_data.pm4 / sensor_data.count);
+            lv_chart_set_ext_y_array(ui_PM4chart, ui_PM4chart_series_1, ui_PM4chart_series_1_array);
+
+            //shift the other values to the left
+            memcpy(ui_TVOCchart_series_1_array, ui_TVOCchart_series_1_array + 1, (CHART_DATA_LENGTH - 1)*sizeof(lv_coord_t));
+            if(sensor_data.tvoc_max < (sensor_data.tvoc / sensor_data.count))
+            {
+                sensor_data.tvoc_max = int(sensor_data.tvoc / sensor_data.count);
+                if(sensor_data.tvoc_max > 100)
+                    lv_chart_set_range( ui_TVOCchart, LV_CHART_AXIS_PRIMARY_Y, 0, sensor_data.tvoc_max);
+            }
+            //Insert new value 
+            ui_TVOCchart_series_1_array[CHART_DATA_LENGTH - 1] = (uint16_t) (sensor_data.tvoc / sensor_data.count);
+            lv_chart_set_ext_y_array(ui_TVOCchart, ui_TVOCchart_series_1, ui_TVOCchart_series_1_array);
+
+            sensor_data.count = 0;
+            sensor_data.pm1 = 0;
+            sensor_data.pm25 = 0;
+            sensor_data.pm10 = 0;
+            sensor_data.pm4 = 0;
+            sensor_data.tvoc = 0;
+        }   
     }
     vTaskDelay(pdMS_TO_TICKS(2000));
   }
 }
-
-
-
-

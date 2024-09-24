@@ -778,7 +778,7 @@
                       {
                         "nid": -599729572,
                         "strtype": "_style/Text_Font",
-                        "strval": "clock48",
+                        "strval": "montserrat_20",
                         "InheritedType": 3
                       }
                     ],
@@ -809,7 +809,7 @@
           {
             "nid": -283929539,
             "strtype": "OBJECT/Name",
-            "strval": "Screen1",
+            "strval": "Intro",
             "InheritedType": 10
           },
           {
@@ -2646,7 +2646,7 @@
           {
             "nid": -508383468,
             "strtype": "OBJECT/Name",
-            "strval": "Screen2",
+            "strval": "owl",
             "InheritedType": 10
           },
           {
@@ -14764,7 +14764,7 @@
                 "flags": 17,
                 "strtype": "OBJECT/Position",
                 "intarray": [
-                  -22,
+                  -25,
                   -105
                 ],
                 "InheritedType": 7
@@ -15053,7 +15053,7 @@
           {
             "nid": -2025526520,
             "strtype": "OBJECT/Name",
-            "strval": "Screen3",
+            "strval": "dashboard",
             "InheritedType": 10
           },
           {
@@ -15791,7 +15791,7 @@
               {
                 "nid": -3232411,
                 "strtype": "CHART/ChartData",
-                "strval": "[{\"Axis\":0,\"Color\":[8,96,3,255],\"Series\":[550,650,750,800,1500,1200,1110,800,800,1200,1400,1700,1300,1100,600]}]",
+                "strval": "[]",
                 "InheritedType": 12
               },
               {
@@ -16816,7 +16816,7 @@
               {
                 "nid": 2044423740,
                 "strtype": "OBJECT/Name",
-                "strval": "gpvalue",
+                "strval": "pm1cv",
                 "InheritedType": 10
               },
               {
@@ -19132,7 +19132,7 @@
               {
                 "nid": -7024938,
                 "strtype": "CHART/ChartData",
-                "strval": "[{\"Axis\":0,\"Color\":[8,96,3,255],\"Series\":[550,650,750,800,1500,1200,1110,800,800,1200,1400,1700,1300,1100,600]}]",
+                "strval": "[]",
                 "InheritedType": 12
               },
               {
@@ -20157,7 +20157,7 @@
               {
                 "nid": -2052988177,
                 "strtype": "OBJECT/Name",
-                "strval": "gpvalue1",
+                "strval": "pm4cv",
                 "InheritedType": 10
               },
               {
@@ -22155,7 +22155,7 @@
               {
                 "nid": -816441236,
                 "strtype": "CHART/ChartData",
-                "strval": "[{\"Axis\":0,\"Color\":[8,96,3,255],\"Series\":[550,650,750,800,1500,1200,1110,800,800,1200,1400,1700,1300,1100,600]}]",
+                "strval": "[]",
                 "InheritedType": 12
               },
               {
@@ -23180,7 +23180,7 @@
               {
                 "nid": -672153541,
                 "strtype": "OBJECT/Name",
-                "strval": "gpvalue2",
+                "strval": "pm25cv",
                 "InheritedType": 10
               },
               {
@@ -25178,7 +25178,7 @@
               {
                 "nid": 929608012,
                 "strtype": "CHART/ChartData",
-                "strval": "[{\"Axis\":0,\"Color\":[8,96,3,255],\"Series\":[550,650,750,800,1500,1200,1110,800,800,1200,1400,1700,1300,1100,600]}]",
+                "strval": "[]",
                 "InheritedType": 12
               },
               {
@@ -26203,7 +26203,7 @@
               {
                 "nid": 473703405,
                 "strtype": "OBJECT/Name",
-                "strval": "gpvalue3",
+                "strval": "pm10cv",
                 "InheritedType": 10
               },
               {
@@ -28201,7 +28201,7 @@
               {
                 "nid": -790402931,
                 "strtype": "CHART/ChartData",
-                "strval": "[{\"Axis\":0,\"Color\":[8,96,3,255],\"Series\":[550,650,750,800,1500,1200,1110,800,800,1200,1400,1700,1300,1100,600]}]",
+                "strval": "[]",
                 "InheritedType": 12
               },
               {
@@ -29226,7 +29226,7 @@
               {
                 "nid": 1462732702,
                 "strtype": "OBJECT/Name",
-                "strval": "gpvalue4",
+                "strval": "tvocv",
                 "InheritedType": 10
               },
               {
@@ -31705,9 +31705,9 @@
     "theme_dark": false,
     "theme_color1": 5,
     "theme_color2": 0,
-    "uiExportFolderPath": "C:\\Users\\Akshaj Rai\\Documents\\GitHub\\airowl\\src\\m5stack\\ui",
-    "projectExportFolderPath": "C:\\Users\\Akshaj Rai\\Documents\\GitHub\\airowl\\squareline\\projects\\ui_square_line",
-    "backup_cnt": 121,
+    "uiExportFolderPath": "/Users/sohilpatel/Documents/GitHub/airowl/src/m5stack/ui",
+    "projectExportFolderPath": "/Users/sohilpatel/Documents/GitHub/airowl/squareline/projects/ui_square_line",
+    "backup_cnt": 127,
     "autosave_cnt": 0,
     "lvgl_version": "8.3.6",
     "callfuncsexport": "DONT_EXPORT",
