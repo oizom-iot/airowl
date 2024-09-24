@@ -31,22 +31,24 @@ void blinkx_Animation( lv_obj_t *TargetObject, int delay);
 void openx_Animation( lv_obj_t *TargetObject, int delay);
 void eyeR_Animation( lv_obj_t *TargetObject, int delay);
 void eyeL_Animation( lv_obj_t *TargetObject, int delay);
+void eyeright_Animation( lv_obj_t *TargetObject, int delay);
+void eyeleft_Animation( lv_obj_t *TargetObject, int delay);
 // SCREEN: ui_Intro
 void ui_Intro_screen_init(void);
 void ui_event_Intro( lv_event_t * e);
 extern lv_obj_t *ui_Intro;
 void ui_event_logo( lv_event_t * e);
 extern lv_obj_t *ui_logo;
-extern lv_obj_t *ui_demo;
+extern lv_obj_t *ui_devicename;
 // SCREEN: ui_owl
 void ui_owl_screen_init(void);
 void ui_event_owl( lv_event_t * e);
 extern lv_obj_t *ui_owl;
-extern lv_obj_t *ui_Container1;
-extern lv_obj_t *ui_Container2;
-extern lv_obj_t *ui_Container3;
-extern lv_obj_t *ui_Container4;
-extern lv_obj_t *ui_Image1;
+extern lv_obj_t *ui_lefteye;
+extern lv_obj_t *ui_righteye;
+extern lv_obj_t *ui_rightpupil;
+extern lv_obj_t *ui_leftpupil;
+extern lv_obj_t *ui_nose;
 // SCREEN: ui_dashboard
 void ui_dashboard_screen_init(void);
 void ui_event_dashboard( lv_event_t * e);
@@ -94,6 +96,7 @@ extern lv_obj_t *ui_clock2;
 extern lv_obj_t *ui_Image3;
 extern lv_obj_t *ui_templabel;
 extern lv_obj_t *ui_RHlabel;
+extern lv_obj_t *ui_Container1;
 // SCREEN: ui_PM1graph
 void ui_PM1graph_screen_init(void);
 extern lv_obj_t *ui_PM1graph;
@@ -101,12 +104,15 @@ extern lv_obj_t *ui_PM1chart;
 extern lv_obj_t *ui_graphparameter;
 extern lv_obj_t *ui_Container13;
 extern lv_obj_t *ui_gpunit;
-extern lv_obj_t *ui_pm1cv;
+extern lv_obj_t *ui_pm1avg;
 void ui_event_return( lv_event_t * e);
 extern lv_obj_t *ui_return;
 extern lv_obj_t *ui_returnlabel;
 extern lv_obj_t *ui_cube;
 extern lv_obj_t *ui_cube1;
+extern lv_obj_t *ui_graphparameter5;
+extern lv_obj_t *ui_graphparameter6;
+extern lv_obj_t *ui_pm1max;
 // SCREEN: ui_PM4graph
 void ui_PM4graph_screen_init(void);
 extern lv_obj_t *ui_PM4graph;
@@ -114,11 +120,14 @@ extern lv_obj_t *ui_PM4chart;
 extern lv_obj_t *ui_graphparameter1;
 extern lv_obj_t *ui_Container12;
 extern lv_obj_t *ui_gpunit1;
-extern lv_obj_t *ui_pm4cv;
 void ui_event_return1( lv_event_t * e);
 extern lv_obj_t *ui_return1;
 extern lv_obj_t *ui_returnlabel1;
 extern lv_obj_t *ui_cube2;
+extern lv_obj_t *ui_graphparameter8;
+extern lv_obj_t *ui_graphparameter9;
+extern lv_obj_t *ui_pm4avg;
+extern lv_obj_t *ui_pm4max;
 // SCREEN: ui_PM25graph
 void ui_PM25graph_screen_init(void);
 extern lv_obj_t *ui_PM25graph;
@@ -126,11 +135,14 @@ extern lv_obj_t *ui_PM25chart;
 extern lv_obj_t *ui_graphparameter2;
 extern lv_obj_t *ui_Container14;
 extern lv_obj_t *ui_gpunit2;
-extern lv_obj_t *ui_pm25cv;
 void ui_event_return2( lv_event_t * e);
 extern lv_obj_t *ui_return2;
 extern lv_obj_t *ui_returnlabel2;
 extern lv_obj_t *ui_cube4;
+extern lv_obj_t *ui_graphparameter10;
+extern lv_obj_t *ui_graphparameter13;
+extern lv_obj_t *ui_pm25avg;
+extern lv_obj_t *ui_pm25max;
 // SCREEN: ui_PM10graph
 void ui_PM10graph_screen_init(void);
 extern lv_obj_t *ui_PM10graph;
@@ -138,11 +150,14 @@ extern lv_obj_t *ui_PM10chart;
 extern lv_obj_t *ui_graphparameter3;
 extern lv_obj_t *ui_Container15;
 extern lv_obj_t *ui_gpunit3;
-extern lv_obj_t *ui_pm10cv;
 void ui_event_return3( lv_event_t * e);
 extern lv_obj_t *ui_return3;
 extern lv_obj_t *ui_returnlabel3;
 extern lv_obj_t *ui_cube5;
+extern lv_obj_t *ui_graphparameter11;
+extern lv_obj_t *ui_graphparameter14;
+extern lv_obj_t *ui_pm10avg;
+extern lv_obj_t *ui_pm10max;
 // SCREEN: ui_TVOCgraph
 void ui_TVOCgraph_screen_init(void);
 extern lv_obj_t *ui_TVOCgraph;
@@ -150,16 +165,20 @@ extern lv_obj_t *ui_TVOCchart;
 extern lv_obj_t *ui_graphparameter4;
 extern lv_obj_t *ui_Container16;
 extern lv_obj_t *ui_gpunit4;
-extern lv_obj_t *ui_tvocv;
 void ui_event_return4( lv_event_t * e);
 extern lv_obj_t *ui_return4;
 extern lv_obj_t *ui_returnlabel4;
+extern lv_obj_t *ui_graphparameter12;
+extern lv_obj_t *ui_graphparameter15;
+extern lv_obj_t *ui_tvocavg;
+extern lv_obj_t *ui_tvocmax;
 extern lv_obj_t *ui____initial_actions0;
 
 LV_IMG_DECLARE( ui__temporary_image );
 LV_IMG_DECLARE( ui_img_oizom_logo_png);   // assets/oizom_logo.png
-LV_IMG_DECLARE( ui_img_26368195);   // assets/Artboard 1@2x.png
+LV_IMG_DECLARE( ui_img_airowl_1_png);   // assets/airowl_1.png
 LV_IMG_DECLARE( ui_img_582762761);   // assets/celsius-degrees-symbol-of-temperature.png
+LV_IMG_DECLARE( ui_img_airowl_2_png);   // assets/airowl_2.png
 
 
 LV_FONT_DECLARE( ui_font_clock24);

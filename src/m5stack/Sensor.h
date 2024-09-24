@@ -4,10 +4,12 @@
 #include <SensirionI2CSen5x.h>
 #include <Wire.h>
 #include "ui/ui.h"
+#include <WiFi.h>
+#include <PubSubClient.h>
 
 #define MAXBUF_REQUIREMENT 48
 #define CHART_DATA_LENGTH 15
-#define DATA_FREQ 5
+#define DATA_FREQ 60
 
 #if (defined(I2C_BUFFER_LENGTH) &&                 \
      (I2C_BUFFER_LENGTH >= MAXBUF_REQUIREMENT)) || \
@@ -28,23 +30,126 @@ typedef struct{
     int count = 0;
 } Sensor_t;
 
+typedef struct {
+  float Cp_Lo; // Low concentration breakpoint
+  float Cp_Hi; // High concentration breakpoint
+  int Ip_Lo;   // Low index breakpoint
+  int Ip_Hi;   // High index breakpoint
+} AQIBreakpoint;
+
+// Function to calculate sub-index
+int calculateSubIndex(float Cp, AQIBreakpoint bp) {
+  float Ip = ((bp.Ip_Hi - bp.Ip_Lo) / (bp.Cp_Hi - bp.Cp_Lo)) * (Cp - bp.Cp_Lo) + bp.Ip_Lo;
+  return (int)round(Ip);
+}
+
+// Function to get breakpoint for a given concentration
+AQIBreakpoint getBreakpoint(float Cp, AQIBreakpoint bps[], int numBps) {
+  for (int i = 0; i < numBps; i++) {
+    if (Cp >= bps[i].Cp_Lo && Cp <= bps[i].Cp_Hi) {
+      return bps[i];
+    }
+  }
+  // Return the highest breakpoint if Cp exceeds the range
+  return bps[numBps - 1];
+}
+
+// Function to get AQI category
+String getAQICategory(int aqi) {
+  if (aqi >= 0 && aqi <= 50) return "Good";
+  else if (aqi <= 100) return "Satisfactory";
+  else if (aqi <= 150) return "Moderate";
+  else if (aqi <= 200) return "Unhealthy";
+  else if (aqi <= 300) return "Very Unhealthy";
+  else return "Hazardous";
+}
+
+uint32_t getAQIColor(int aqi) {
+  if (aqi >= 0 && aqi <= 50) return 0x00E400; // Good
+  else if (aqi <= 100) return 0x9CFF9C; // Satisfactory
+  else if (aqi <= 150) return 0xFFFF00; // Moderate
+  else if (aqi <= 200) return 0xFF7E00; // Unhealthy
+  else if (aqi <= 300) return 0xFF0000; // Very Unhealthy
+  else return 0x8F3F97; // Hazardous
+}
+
+// PM2.5 Breakpoints
+AQIBreakpoint pm25Bps[] = {
+  {0.0, 12.0, 0, 50},
+  {12.1, 35.4, 51, 100},
+  {35.5, 55.4, 101, 150},
+  {55.5, 150.4, 151, 200},
+  {150.5, 250.4, 201, 300},
+  {250.5, 500.4, 301, 500}
+};
+
+// PM10 Breakpoints
+AQIBreakpoint pm10Bps[] = {
+  {0, 54, 0, 50},
+  {55, 154, 51, 100},
+  {155, 254, 101, 150},
+  {255, 354, 151, 200},
+  {355, 424, 201, 300},
+  {425, 604, 301, 500}
+};
+
+// TVOC Breakpoints (example values)
+AQIBreakpoint tvocBps[] = {
+  {0.0, 300, 0, 50},
+  {300, 500, 51, 100},
+  {500, 1000, 101, 150},
+  {1000, 3000, 151, 200},
+  {4000, 5000, 201, 300},
+  {5000, 10000, 301, 500}
+};
+
 SensirionI2CSen5x sen5x;
 Sensor_t sensor_data;
 
+WiFiClient espClient;
+PubSubClient client(espClient);
+
+String deviceName = "";
+
+// MQTT Server Details
+const char* mqtt_server = "mqtt.oizom.com";
+
 lv_chart_series_t * ui_PM1chart_series_1 = { 0 };
-static lv_coord_t ui_PM1chart_series_1_array[CHART_DATA_LENGTH] = { 9, 10, 12, 9, 12, 24, 8, 10, 10, 39, 11, 14, 15, 16, 17 };
+static lv_coord_t ui_PM1chart_series_1_array[CHART_DATA_LENGTH] = { 0 };
         
 lv_chart_series_t * ui_PM25chart_series_1 = { 0 };
-static lv_coord_t ui_PM25chart_series_1_array[CHART_DATA_LENGTH] = { 9, 10, 12, 9, 12, 24, 8, 10, 10, 39, 11, 14, 15, 16, 17 };
+static lv_coord_t ui_PM25chart_series_1_array[CHART_DATA_LENGTH] = { 0 };
 
 lv_chart_series_t * ui_PM4chart_series_1 = { 0 };
-static lv_coord_t ui_PM4chart_series_1_array[CHART_DATA_LENGTH] = { 9, 10, 12, 9, 12, 24, 8, 10, 10, 39, 11, 14, 15, 16, 17 };
+static lv_coord_t ui_PM4chart_series_1_array[CHART_DATA_LENGTH] = { 0 };
 
 lv_chart_series_t * ui_PM10chart_series_1 = { 0 };
-static lv_coord_t ui_PM10chart_series_1_array[CHART_DATA_LENGTH] = { 9, 10, 12, 9, 12, 24, 8, 10, 10, 39, 11, 14, 15, 16, 17 };
+static lv_coord_t ui_PM10chart_series_1_array[CHART_DATA_LENGTH] = { 0 };
 
 lv_chart_series_t * ui_TVOCchart_series_1 = { 0 };
-static lv_coord_t ui_TVOCchart_series_1_array[CHART_DATA_LENGTH] = { 9, 10, 12, 9, 12, 24, 8, 10, 10, 39, 11, 14, 15, 16, 17 };
+static lv_coord_t ui_TVOCchart_series_1_array[CHART_DATA_LENGTH] = { 0 };
+
+void callback(char* topic, byte* payload, unsigned int length) {
+  // handle message arrived
+}
+
+boolean reconnect() {
+  if(!client.connected())
+  {
+    String clientId = "AIROWL";
+    clientId += String(random(0xffffff), HEX);
+    if (client.connect(clientId.c_str(), "oizom", "12345678")) {
+        M5.Log.println("MQTT Connected");
+    }
+  }
+  return client.connected();
+}
+
+void setupMQTT()
+{
+    client.setServer(mqtt_server, 1883);
+    client.setCallback(callback);
+}
 
 void setupCharts()
 {
@@ -71,39 +176,42 @@ void setupCharts()
 
 void sensorData(void *params)
 {
-      Wire.begin(2, 1, 100000L);
-      sen5x.begin(Wire);
+    Wire.begin(2, 1, 100000L);
+    sen5x.begin(Wire);
 
-      uint16_t error;
-      char errorMessage[256];
-      error = sen5x.deviceReset();
-      if (error) {
-          Serial.print("Error trying to execute deviceReset(): ");
-          errorToString(error, errorMessage, 256);
-          Serial.println(errorMessage);
-      }
+    uint16_t error;
+    char errorMessage[256];
+    error = sen5x.deviceReset();
+    if (error) {
+        M5.Log.print("Error trying to execute deviceReset(): ");
+        errorToString(error, errorMessage, 256);
+        M5.Log.println(errorMessage);
+    }
 
-      float tempOffset = 0.0;
-      error = sen5x.setTemperatureOffsetSimple(tempOffset);
-      if (error) {
-          Serial.print("Error trying to execute setTemperatureOffsetSimple(): ");
-          errorToString(error, errorMessage, 256);
-          Serial.println(errorMessage);
-      } else {
-          Serial.print("Temperature Offset set to ");
-          Serial.print(tempOffset);
-          Serial.println(" deg. Celsius (SEN54/SEN55 only");
-      }
+    float tempOffset = 0.0;
+    error = sen5x.setTemperatureOffsetSimple(tempOffset);
+    if (error) {
+        M5.Log.print("Error trying to execute setTemperatureOffsetSimple(): ");
+        errorToString(error, errorMessage, 256);
+        M5.Log.println(errorMessage);
+    } else {
+        M5.Log.print("Temperature Offset set to ");
+        M5.Log.println(" deg. Celsius (SEN54/SEN55 only");
+    }
 
-      // Start Measurement
-      error = sen5x.startMeasurement();
-      if (error) {
-          Serial.print("Error trying to execute startMeasurement(): ");
-          errorToString(error, errorMessage, 256);
-          Serial.println(errorMessage);
-      }
+    // Start Measurement
+    error = sen5x.startMeasurement();
+    if (error) {
+        M5.Log.print("Error trying to execute startMeasurement(): ");
+        errorToString(error, errorMessage, 256);
+        M5.Log.println(errorMessage);
+    }
 
-      setupCharts();
+    setupCharts();
+    setupMQTT();
+    String mac = WiFi.macAddress();
+    mac.replace(":", "");
+    deviceName = "AIROWL_" + mac.substring(6);
 
   while(1)
   {
@@ -125,12 +233,11 @@ void sensorData(void *params)
         t_pm10, t_hum, t_temp, vocIndex,
         noxIndex);
 
-    if (error) {
-        Serial.print("Error trying to execute readMeasuredValues(): ");
+    if (error || isnan(t_pm1) || isnan(t_pm25) || isnan(t_pm4) || isnan(t_pm10) || isnan(vocIndex)) {
+        M5.Log.print("Error trying to execute readMeasuredValues(): ");
         errorToString(error, errorMessage, 256);
-        Serial.println(errorMessage);
+        M5.Log.println(errorMessage);
     } else {
-        
         sensor_data.pm1 += t_pm1;
         sensor_data.pm25 += t_pm25;
         sensor_data.pm10 += t_pm10;
@@ -155,7 +262,7 @@ void sensorData(void *params)
 
         char tvocbuffer[6] = {0};
         if (isnan(vocIndex)) {
-            Serial.println("n/a");
+            M5.Log.println("n/a");
         } else {
             sensor_data.tvoc += vocIndex;
             dtostrf(vocIndex, 6, 1, tvocbuffer);
@@ -164,7 +271,7 @@ void sensorData(void *params)
 
         char humbuffer[4] = {0};
         if (isnan(t_hum)) {
-            Serial.println("n/a");
+            M5.Log.println("n/a");
         } else {
             dtostrf(t_hum, 4, 1, humbuffer);
             lv_label_set_text(ui_RHlabel, humbuffer);
@@ -172,7 +279,7 @@ void sensorData(void *params)
 
         char tempbuffer[4] = {0};
         if (isnan(t_temp)) {
-            Serial.println("n/a");
+            M5.Log.println("n/a");
         } else {
             dtostrf(t_temp, 4, 1, tempbuffer);
             lv_label_set_text(ui_templabel, tempbuffer);
@@ -180,75 +287,162 @@ void sensorData(void *params)
 
         if(sensor_data.count == DATA_FREQ)
         {
+            float avgPM1 = (sensor_data.pm1 / sensor_data.count);
+            float avgPM25 = (sensor_data.pm25 / sensor_data.count);
+            float avgPM10 = (sensor_data.pm10 / sensor_data.count);
+            float avgPM4 = (sensor_data.pm4 / sensor_data.count);
+            float avgTVOC = (sensor_data.tvoc / sensor_data.count);
 
+            AQIBreakpoint pm25Bp = getBreakpoint(avgPM25, pm25Bps, sizeof(pm25Bps)/sizeof(pm25Bps[0]));
+            AQIBreakpoint pm10Bp = getBreakpoint(avgPM10, pm10Bps, sizeof(pm10Bps)/sizeof(pm10Bps[0]));
+            AQIBreakpoint tvocBp = getBreakpoint(avgTVOC, tvocBps, sizeof(tvocBps)/sizeof(tvocBps[0]));
+
+            // Calculate sub-indices
+            int pm25Index = calculateSubIndex(avgPM25, pm25Bp);
+            int pm10Index = calculateSubIndex(avgPM10, pm10Bp);
+            int tvocIndex = calculateSubIndex(avgTVOC, tvocBp);
+
+            // Combine sub-indices (choose one method)
+            // Method 1: Maximum Sub-Index
+            int aqi = max(max(pm25Index, pm10Index), tvocIndex);
+
+            // Method 2: Weighted Average
+            // float aqi = (pm25Index * 0.5) + (pm10Index * 0.3) + (tvocIndex * 0.2);
+            // aqi = round(aqi);
+
+            // Get AQI category
+            String airQualityCategory = getAQICategory(aqi);
+            uint32_t color = getAQIColor(aqi);
+            lv_obj_set_style_bg_color(ui_lefteye, lv_color_hex(color), LV_PART_MAIN | LV_STATE_DEFAULT );
+            lv_obj_set_style_bg_color(ui_righteye, lv_color_hex(color), LV_PART_MAIN | LV_STATE_DEFAULT );
+
+            // Set PM1 Chart Screen
+            char pm1avg[6] = {0};
+            char pm1max[6] = {0};
+            dtostrf(avgPM1, 6, 1, pm1avg);
+            lv_label_set_text(ui_pm1avg, pm1avg);
+            dtostrf(sensor_data.pm1_max, 6, 1, pm1max);
+            lv_label_set_text(ui_pm1max, pm1max);
             //shift the other values to the left
             memcpy(ui_PM1chart_series_1_array, ui_PM1chart_series_1_array + 1, (CHART_DATA_LENGTH - 1)*sizeof(lv_coord_t));
-            if(sensor_data.pm1_max < (sensor_data.pm1 / sensor_data.count))
+            if(sensor_data.pm1_max < avgPM1)
             {
-                sensor_data.pm1_max = int(sensor_data.pm1 / sensor_data.count);
+                sensor_data.pm1_max = int(avgPM1);
                 if(sensor_data.pm1_max > 50)
-                    lv_chart_set_range( ui_PM1chart, LV_CHART_AXIS_PRIMARY_Y, 0, sensor_data.pm1_max);
+                    lv_chart_set_range( ui_PM1chart, LV_CHART_AXIS_PRIMARY_Y, 0, sensor_data.pm1_max + 20);
             }
             //Insert new value 
-            ui_PM1chart_series_1_array[CHART_DATA_LENGTH - 1] = (uint16_t) (sensor_data.pm1 / sensor_data.count);
+            ui_PM1chart_series_1_array[CHART_DATA_LENGTH - 1] = (uint16_t) (avgPM1);
             lv_chart_set_ext_y_array(ui_PM1chart, ui_PM1chart_series_1, ui_PM1chart_series_1_array);
 
+            // Set PM2.5 Chart Screens
+            char pm25avg[6] = {0};
+            char pm25max[6] = {0};
+            dtostrf(avgPM25, 6, 1, pm25avg);
+            lv_label_set_text(ui_pm25avg, pm25avg);
+            dtostrf(sensor_data.pm25_max, 6, 1, pm25max);
+            lv_label_set_text(ui_pm25max, pm25max);
             //shift the other values to the left
             memcpy(ui_PM25chart_series_1_array, ui_PM25chart_series_1_array + 1, (CHART_DATA_LENGTH - 1)*sizeof(lv_coord_t));
-            if(sensor_data.pm25_max < (sensor_data.pm25 / sensor_data.count))
+            if(sensor_data.pm25_max < (avgPM25))
             {
-                sensor_data.pm25_max = int(sensor_data.pm25 / sensor_data.count);
+                sensor_data.pm25_max = int(avgPM25);
                 if(sensor_data.pm25_max > 50)
-                    lv_chart_set_range( ui_PM25chart, LV_CHART_AXIS_PRIMARY_Y, 0, sensor_data.pm25_max);
+                    lv_chart_set_range( ui_PM25chart, LV_CHART_AXIS_PRIMARY_Y, 0, sensor_data.pm25_max + 20);
             }
             //Insert new value 
-            ui_PM25chart_series_1_array[CHART_DATA_LENGTH - 1] = (uint16_t) (sensor_data.pm25 / sensor_data.count);
+            ui_PM25chart_series_1_array[CHART_DATA_LENGTH - 1] = (uint16_t) (avgPM25);
             lv_chart_set_ext_y_array(ui_PM25chart, ui_PM25chart_series_1, ui_PM25chart_series_1_array);
 
+            // Set PM10 Chart Screens
+            char pm10avg[6] = {0};
+            char pm10max[6] = {0};
+            dtostrf(avgPM10, 6, 1, pm10avg);
+            lv_label_set_text(ui_pm10avg, pm10avg);
+            dtostrf(sensor_data.pm10_max, 6, 1, pm10max);
+            lv_label_set_text(ui_pm10max, pm10max);
             //shift the other values to the left
             memcpy(ui_PM10chart_series_1_array, ui_PM10chart_series_1_array + 1, (CHART_DATA_LENGTH - 1)*sizeof(lv_coord_t));
-            if(sensor_data.pm10_max < (sensor_data.pm10 / sensor_data.count))
+            if(sensor_data.pm10_max < (avgPM10))
             {
-                sensor_data.pm10_max = int(sensor_data.pm10 / sensor_data.count);
+                sensor_data.pm10_max = int(avgPM10);
                 if(sensor_data.pm10_max > 50)
-                    lv_chart_set_range( ui_PM10chart, LV_CHART_AXIS_PRIMARY_Y, 0, sensor_data.pm10_max);
+                    lv_chart_set_range( ui_PM10chart, LV_CHART_AXIS_PRIMARY_Y, 0, sensor_data.pm10_max + 20);
             }
             //Insert new value 
-            ui_PM10chart_series_1_array[CHART_DATA_LENGTH - 1] = (uint16_t) (sensor_data.pm10 / sensor_data.count);
+            ui_PM10chart_series_1_array[CHART_DATA_LENGTH - 1] = (uint16_t) (avgPM10);
             lv_chart_set_ext_y_array(ui_PM10chart, ui_PM10chart_series_1, ui_PM10chart_series_1_array);
 
+            // Set PM4 Chart Screens
+            char pm4avg[6] = {0};
+            char pm4max[6] = {0};
+            dtostrf(avgPM4, 6, 1, pm4avg);
+            lv_label_set_text(ui_pm4avg, pm4avg);
+            dtostrf(sensor_data.pm4_max, 6, 1, pm4max);
+            lv_label_set_text(ui_pm4max, pm4max);
             //shift the other values to the left
             memcpy(ui_PM4chart_series_1_array, ui_PM4chart_series_1_array + 1, (CHART_DATA_LENGTH - 1)*sizeof(lv_coord_t));
-            if(sensor_data.pm4_max < (sensor_data.pm4 / sensor_data.count))
+            if(sensor_data.pm4_max < (avgPM4))
             {
-                sensor_data.pm4_max = int(sensor_data.pm4 / sensor_data.count);
+                sensor_data.pm4_max = int(avgPM4);
                 if(sensor_data.pm4_max > 50)
-                    lv_chart_set_range( ui_PM4chart, LV_CHART_AXIS_PRIMARY_Y, 0, sensor_data.pm4_max);
+                    lv_chart_set_range( ui_PM4chart, LV_CHART_AXIS_PRIMARY_Y, 0, sensor_data.pm4_max + 20);
             }
             //Insert new value 
-            ui_PM4chart_series_1_array[CHART_DATA_LENGTH - 1] = (uint16_t) (sensor_data.pm4 / sensor_data.count);
+            ui_PM4chart_series_1_array[CHART_DATA_LENGTH - 1] = (uint16_t) (avgPM4);
             lv_chart_set_ext_y_array(ui_PM4chart, ui_PM4chart_series_1, ui_PM4chart_series_1_array);
 
+            // Set TVOC Chart Screens
+            char tvocavg[6] = {0};
+            char tvocmax[6] = {0};
+            dtostrf(avgTVOC, 6, 1, tvocavg);
+            lv_label_set_text(ui_tvocavg, tvocavg);
+            dtostrf(sensor_data.tvoc_max, 6, 1, tvocmax);
+            lv_label_set_text(ui_tvocmax, tvocmax);
             //shift the other values to the left
             memcpy(ui_TVOCchart_series_1_array, ui_TVOCchart_series_1_array + 1, (CHART_DATA_LENGTH - 1)*sizeof(lv_coord_t));
-            if(sensor_data.tvoc_max < (sensor_data.tvoc / sensor_data.count))
+            if(sensor_data.tvoc_max < (avgTVOC))
             {
-                sensor_data.tvoc_max = int(sensor_data.tvoc / sensor_data.count);
+                sensor_data.tvoc_max = int(avgTVOC);
                 if(sensor_data.tvoc_max > 100)
-                    lv_chart_set_range( ui_TVOCchart, LV_CHART_AXIS_PRIMARY_Y, 0, sensor_data.tvoc_max);
+                    lv_chart_set_range( ui_TVOCchart, LV_CHART_AXIS_PRIMARY_Y, 0, sensor_data.tvoc_max + 20);
             }
             //Insert new value 
-            ui_TVOCchart_series_1_array[CHART_DATA_LENGTH - 1] = (uint16_t) (sensor_data.tvoc / sensor_data.count);
+            ui_TVOCchart_series_1_array[CHART_DATA_LENGTH - 1] = (uint16_t) (avgTVOC);
             lv_chart_set_ext_y_array(ui_TVOCchart, ui_TVOCchart_series_1, ui_TVOCchart_series_1_array);
 
-            sensor_data.count = 0;
-            sensor_data.pm1 = 0;
-            sensor_data.pm25 = 0;
-            sensor_data.pm10 = 0;
-            sensor_data.pm4 = 0;
-            sensor_data.tvoc = 0;
+            if(WiFi.status() == WL_CONNECTED)
+            {
+                if (!client.connected()) {
+                    reconnect();
+                } else {
+                    // Construct the JSON string
+                    String jsonString = "{";
+                    jsonString += "\"deviceId\":\"";
+                    jsonString += deviceName;
+                    jsonString += "\",";
+                    jsonString += "\"p3\":";
+                    jsonString += String(avgPM1, 2);
+                    jsonString += ",";
+                    jsonString += "\"p1\":";
+                    jsonString += String(avgPM25, 2);
+                    jsonString += ",";
+                    jsonString += "\"p2\":";
+                    jsonString += String(avgPM10, 2);
+                    jsonString += ",";
+                    jsonString += "\"p5\":";
+                    jsonString += String(avgPM4, 2);
+                    jsonString += ",";
+                    jsonString += "\"v2\":";
+                    jsonString += String(avgTVOC, 2);
+                    jsonString += "}";
+                    client.publish("airowl", jsonString.c_str());
+                    client.loop();
+                }
+            }
+            sensor_data = Sensor_t();
         }   
     }
-    vTaskDelay(pdMS_TO_TICKS(2000));
+    delay(2000);
   }
 }

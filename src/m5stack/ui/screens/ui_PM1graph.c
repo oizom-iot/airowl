@@ -33,7 +33,7 @@ lv_obj_set_style_bg_opa(ui_PM1chart, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
 ui_graphparameter = lv_label_create(ui_PM1graph);
 lv_obj_set_width( ui_graphparameter, LV_SIZE_CONTENT);  /// 1
 lv_obj_set_height( ui_graphparameter, LV_SIZE_CONTENT);   /// 1
-lv_obj_set_x( ui_graphparameter, -121 );
+lv_obj_set_x( ui_graphparameter, -124 );
 lv_obj_set_y( ui_graphparameter, -99 );
 lv_obj_set_align( ui_graphparameter, LV_ALIGN_CENTER );
 lv_label_set_text(ui_graphparameter,"PM1.0");
@@ -66,16 +66,16 @@ lv_obj_set_style_text_color(ui_gpunit, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV
 lv_obj_set_style_text_opa(ui_gpunit, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
 lv_obj_set_style_text_font(ui_gpunit, &lv_font_montserrat_10, LV_PART_MAIN| LV_STATE_DEFAULT);
 
-ui_pm1cv = lv_label_create(ui_PM1graph);
-lv_obj_set_width( ui_pm1cv, LV_SIZE_CONTENT);  /// 1
-lv_obj_set_height( ui_pm1cv, LV_SIZE_CONTENT);   /// 1
-lv_obj_set_x( ui_pm1cv, 99 );
-lv_obj_set_y( ui_pm1cv, -100 );
-lv_obj_set_align( ui_pm1cv, LV_ALIGN_CENTER );
-lv_label_set_text(ui_pm1cv,"1200");
-lv_obj_set_style_text_color(ui_pm1cv, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT );
-lv_obj_set_style_text_opa(ui_pm1cv, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
-lv_obj_set_style_text_font(ui_pm1cv, &lv_font_montserrat_18, LV_PART_MAIN| LV_STATE_DEFAULT);
+ui_pm1avg = lv_label_create(ui_PM1graph);
+lv_obj_set_width( ui_pm1avg, LV_SIZE_CONTENT);  /// 1
+lv_obj_set_height( ui_pm1avg, LV_SIZE_CONTENT);   /// 1
+lv_obj_set_x( ui_pm1avg, 18 );
+lv_obj_set_y( ui_pm1avg, -98 );
+lv_obj_set_align( ui_pm1avg, LV_ALIGN_CENTER );
+lv_label_set_text(ui_pm1avg,"-");
+lv_obj_set_style_text_color(ui_pm1avg, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT );
+lv_obj_set_style_text_opa(ui_pm1avg, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_text_font(ui_pm1avg, &lv_font_montserrat_18, LV_PART_MAIN| LV_STATE_DEFAULT);
 
 ui_return = lv_btn_create(ui_PM1graph);
 lv_obj_set_width( ui_return, 245);
@@ -121,6 +121,39 @@ lv_label_set_text(ui_cube1,"3");
 lv_obj_set_style_text_color(ui_cube1, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT );
 lv_obj_set_style_text_opa(ui_cube1, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
 lv_obj_set_style_text_font(ui_cube1, &lv_font_montserrat_12, LV_PART_MAIN| LV_STATE_DEFAULT);
+
+ui_graphparameter5 = lv_label_create(ui_PM1graph);
+lv_obj_set_width( ui_graphparameter5, LV_SIZE_CONTENT);  /// 1
+lv_obj_set_height( ui_graphparameter5, LV_SIZE_CONTENT);   /// 1
+lv_obj_set_x( ui_graphparameter5, -17 );
+lv_obj_set_y( ui_graphparameter5, -97 );
+lv_obj_set_align( ui_graphparameter5, LV_ALIGN_CENTER );
+lv_label_set_text(ui_graphparameter5,"avg");
+lv_obj_set_style_text_color(ui_graphparameter5, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT );
+lv_obj_set_style_text_opa(ui_graphparameter5, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_text_font(ui_graphparameter5, &lv_font_montserrat_12, LV_PART_MAIN| LV_STATE_DEFAULT);
+
+ui_graphparameter6 = lv_label_create(ui_PM1graph);
+lv_obj_set_width( ui_graphparameter6, LV_SIZE_CONTENT);  /// 1
+lv_obj_set_height( ui_graphparameter6, LV_SIZE_CONTENT);   /// 1
+lv_obj_set_x( ui_graphparameter6, 77 );
+lv_obj_set_y( ui_graphparameter6, -96 );
+lv_obj_set_align( ui_graphparameter6, LV_ALIGN_CENTER );
+lv_label_set_text(ui_graphparameter6,"max");
+lv_obj_set_style_text_color(ui_graphparameter6, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT );
+lv_obj_set_style_text_opa(ui_graphparameter6, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_text_font(ui_graphparameter6, &lv_font_montserrat_12, LV_PART_MAIN| LV_STATE_DEFAULT);
+
+ui_pm1max = lv_label_create(ui_PM1graph);
+lv_obj_set_width( ui_pm1max, LV_SIZE_CONTENT);  /// 1
+lv_obj_set_height( ui_pm1max, LV_SIZE_CONTENT);   /// 1
+lv_obj_set_x( ui_pm1max, 116 );
+lv_obj_set_y( ui_pm1max, -98 );
+lv_obj_set_align( ui_pm1max, LV_ALIGN_CENTER );
+lv_label_set_text(ui_pm1max,"-");
+lv_obj_set_style_text_color(ui_pm1max, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT );
+lv_obj_set_style_text_opa(ui_pm1max, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_text_font(ui_pm1max, &lv_font_montserrat_18, LV_PART_MAIN| LV_STATE_DEFAULT);
 
 lv_obj_add_event_cb(ui_return, ui_event_return, LV_EVENT_ALL, NULL);
 

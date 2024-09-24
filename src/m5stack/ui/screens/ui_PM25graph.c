@@ -66,17 +66,6 @@ lv_obj_set_style_text_color(ui_gpunit2, lv_color_hex(0xFFFFFF), LV_PART_MAIN | L
 lv_obj_set_style_text_opa(ui_gpunit2, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
 lv_obj_set_style_text_font(ui_gpunit2, &lv_font_montserrat_10, LV_PART_MAIN| LV_STATE_DEFAULT);
 
-ui_pm25cv = lv_label_create(ui_PM25graph);
-lv_obj_set_width( ui_pm25cv, LV_SIZE_CONTENT);  /// 1
-lv_obj_set_height( ui_pm25cv, LV_SIZE_CONTENT);   /// 1
-lv_obj_set_x( ui_pm25cv, 99 );
-lv_obj_set_y( ui_pm25cv, -100 );
-lv_obj_set_align( ui_pm25cv, LV_ALIGN_CENTER );
-lv_label_set_text(ui_pm25cv,"1600");
-lv_obj_set_style_text_color(ui_pm25cv, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT );
-lv_obj_set_style_text_opa(ui_pm25cv, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
-lv_obj_set_style_text_font(ui_pm25cv, &lv_font_montserrat_18, LV_PART_MAIN| LV_STATE_DEFAULT);
-
 ui_return2 = lv_btn_create(ui_PM25graph);
 lv_obj_set_width( ui_return2, 245);
 lv_obj_set_height( ui_return2, 37);
@@ -110,6 +99,50 @@ lv_label_set_text(ui_cube4,"3");
 lv_obj_set_style_text_color(ui_cube4, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT );
 lv_obj_set_style_text_opa(ui_cube4, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
 lv_obj_set_style_text_font(ui_cube4, &lv_font_montserrat_12, LV_PART_MAIN| LV_STATE_DEFAULT);
+
+ui_graphparameter10 = lv_label_create(ui_PM25graph);
+lv_obj_set_width( ui_graphparameter10, LV_SIZE_CONTENT);  /// 1
+lv_obj_set_height( ui_graphparameter10, LV_SIZE_CONTENT);   /// 1
+lv_obj_set_x( ui_graphparameter10, -17 );
+lv_obj_set_y( ui_graphparameter10, -97 );
+lv_obj_set_align( ui_graphparameter10, LV_ALIGN_CENTER );
+lv_label_set_text(ui_graphparameter10,"avg");
+lv_obj_set_style_text_color(ui_graphparameter10, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT );
+lv_obj_set_style_text_opa(ui_graphparameter10, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_text_font(ui_graphparameter10, &lv_font_montserrat_12, LV_PART_MAIN| LV_STATE_DEFAULT);
+
+ui_graphparameter13 = lv_label_create(ui_PM25graph);
+lv_obj_set_width( ui_graphparameter13, LV_SIZE_CONTENT);  /// 1
+lv_obj_set_height( ui_graphparameter13, LV_SIZE_CONTENT);   /// 1
+lv_obj_set_x( ui_graphparameter13, 77 );
+lv_obj_set_y( ui_graphparameter13, -96 );
+lv_obj_set_align( ui_graphparameter13, LV_ALIGN_CENTER );
+lv_label_set_text(ui_graphparameter13,"max");
+lv_obj_set_style_text_color(ui_graphparameter13, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT );
+lv_obj_set_style_text_opa(ui_graphparameter13, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_text_font(ui_graphparameter13, &lv_font_montserrat_12, LV_PART_MAIN| LV_STATE_DEFAULT);
+
+ui_pm25avg = lv_label_create(ui_PM25graph);
+lv_obj_set_width( ui_pm25avg, LV_SIZE_CONTENT);  /// 1
+lv_obj_set_height( ui_pm25avg, LV_SIZE_CONTENT);   /// 1
+lv_obj_set_x( ui_pm25avg, 18 );
+lv_obj_set_y( ui_pm25avg, -98 );
+lv_obj_set_align( ui_pm25avg, LV_ALIGN_CENTER );
+lv_label_set_text(ui_pm25avg,"-");
+lv_obj_set_style_text_color(ui_pm25avg, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT );
+lv_obj_set_style_text_opa(ui_pm25avg, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_text_font(ui_pm25avg, &lv_font_montserrat_18, LV_PART_MAIN| LV_STATE_DEFAULT);
+
+ui_pm25max = lv_label_create(ui_PM25graph);
+lv_obj_set_width( ui_pm25max, LV_SIZE_CONTENT);  /// 1
+lv_obj_set_height( ui_pm25max, LV_SIZE_CONTENT);   /// 1
+lv_obj_set_x( ui_pm25max, 116 );
+lv_obj_set_y( ui_pm25max, -98 );
+lv_obj_set_align( ui_pm25max, LV_ALIGN_CENTER );
+lv_label_set_text(ui_pm25max,"-");
+lv_obj_set_style_text_color(ui_pm25max, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT );
+lv_obj_set_style_text_opa(ui_pm25max, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
+lv_obj_set_style_text_font(ui_pm25max, &lv_font_montserrat_18, LV_PART_MAIN| LV_STATE_DEFAULT);
 
 lv_obj_add_event_cb(ui_return2, ui_event_return2, LV_EVENT_ALL, NULL);
 
