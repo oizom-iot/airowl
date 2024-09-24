@@ -55,7 +55,6 @@ lv_obj_t * ui_pm25label;
 lv_obj_t * ui_PM1;
 lv_obj_t * ui_PM1u;
 lv_obj_t * ui_PM1t;
-lv_obj_t * ui_Temperature;
 lv_obj_t * ui_RHpercent;
 lv_obj_t * ui_TVOC;
 lv_obj_t * ui_TVOCppb;
@@ -78,8 +77,11 @@ void ui_event_Container11(lv_event_t * e);
 lv_obj_t * ui_Container11;
 void ui_event_Button6(lv_event_t * e);
 lv_obj_t * ui_Button6;
-lv_obj_t * ui_pm10label2;
+lv_obj_t * ui_tvoclabel;
 lv_obj_t * ui_clock2;
+lv_obj_t * ui_Image3;
+lv_obj_t * ui_templabel;
+lv_obj_t * ui_RHlabel;
 
 
 // SCREEN: ui_Screen4

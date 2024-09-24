@@ -67,7 +67,6 @@ extern lv_obj_t * ui_pm25label;
 extern lv_obj_t * ui_PM1;
 extern lv_obj_t * ui_PM1u;
 extern lv_obj_t * ui_PM1t;
-extern lv_obj_t * ui_Temperature;
 extern lv_obj_t * ui_RHpercent;
 extern lv_obj_t * ui_TVOC;
 extern lv_obj_t * ui_TVOCppb;
@@ -90,8 +89,11 @@ void ui_event_Container11(lv_event_t * e);
 extern lv_obj_t * ui_Container11;
 void ui_event_Button6(lv_event_t * e);
 extern lv_obj_t * ui_Button6;
-extern lv_obj_t * ui_pm10label2;
+extern lv_obj_t * ui_tvoclabel;
 extern lv_obj_t * ui_clock2;
+extern lv_obj_t * ui_Image3;
+extern lv_obj_t * ui_templabel;
+extern lv_obj_t * ui_RHlabel;
 // SCREEN: ui_Screen4
 void ui_Screen4_screen_init(void);
 extern lv_obj_t * ui_Screen4;
@@ -152,6 +154,7 @@ extern lv_obj_t * ui____initial_actions0;
 
 LV_IMG_DECLARE(ui__temporary_image);
 LV_IMG_DECLARE(ui_img_oizom_logo_png);    // assets/oizom_logo.png
+LV_IMG_DECLARE(ui_img_582762761);    // assets/celsius-degrees-symbol-of-temperature.png
 
 
 
