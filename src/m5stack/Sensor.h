@@ -330,8 +330,6 @@ void sensorData(void *params)
             char pm1max[6] = {0};
             dtostrf(avgPM1, 6, 1, pm1avg);
             lv_label_set_text(ui_pm1avg, pm1avg);
-            dtostrf(sensor_data.pm1_max, 6, 1, pm1max);
-            lv_label_set_text(ui_pm1max, pm1max);
             //shift the other values to the left
             memcpy(ui_PM1chart_series_1_array, ui_PM1chart_series_1_array + 1, (CHART_DATA_LENGTH - 1)*sizeof(lv_coord_t));
             if(sensor_data.pm1_max < avgPM1)
@@ -340,6 +338,8 @@ void sensorData(void *params)
                 if(sensor_data.pm1_max > 50)
                     lv_chart_set_range( ui_PM1chart, LV_CHART_AXIS_PRIMARY_Y, 0, sensor_data.pm1_max + 20);
             }
+            dtostrf(sensor_data.pm1_max, 6, 1, pm1max);
+            lv_label_set_text(ui_pm1max, pm1max);
             //Insert new value 
             ui_PM1chart_series_1_array[CHART_DATA_LENGTH - 1] = (uint16_t) (avgPM1);
             lv_chart_set_ext_y_array(ui_PM1chart, ui_PM1chart_series_1, ui_PM1chart_series_1_array);
@@ -349,8 +349,6 @@ void sensorData(void *params)
             char pm25max[6] = {0};
             dtostrf(avgPM25, 6, 1, pm25avg);
             lv_label_set_text(ui_pm25avg, pm25avg);
-            dtostrf(sensor_data.pm25_max, 6, 1, pm25max);
-            lv_label_set_text(ui_pm25max, pm25max);
             //shift the other values to the left
             memcpy(ui_PM25chart_series_1_array, ui_PM25chart_series_1_array + 1, (CHART_DATA_LENGTH - 1)*sizeof(lv_coord_t));
             if(sensor_data.pm25_max < (avgPM25))
@@ -359,6 +357,8 @@ void sensorData(void *params)
                 if(sensor_data.pm25_max > 50)
                     lv_chart_set_range( ui_PM25chart, LV_CHART_AXIS_PRIMARY_Y, 0, sensor_data.pm25_max + 20);
             }
+            dtostrf(sensor_data.pm25_max, 6, 1, pm25max);
+            lv_label_set_text(ui_pm25max, pm25max);
             //Insert new value 
             ui_PM25chart_series_1_array[CHART_DATA_LENGTH - 1] = (uint16_t) (avgPM25);
             lv_chart_set_ext_y_array(ui_PM25chart, ui_PM25chart_series_1, ui_PM25chart_series_1_array);
@@ -368,8 +368,6 @@ void sensorData(void *params)
             char pm10max[6] = {0};
             dtostrf(avgPM10, 6, 1, pm10avg);
             lv_label_set_text(ui_pm10avg, pm10avg);
-            dtostrf(sensor_data.pm10_max, 6, 1, pm10max);
-            lv_label_set_text(ui_pm10max, pm10max);
             //shift the other values to the left
             memcpy(ui_PM10chart_series_1_array, ui_PM10chart_series_1_array + 1, (CHART_DATA_LENGTH - 1)*sizeof(lv_coord_t));
             if(sensor_data.pm10_max < (avgPM10))
@@ -378,6 +376,8 @@ void sensorData(void *params)
                 if(sensor_data.pm10_max > 50)
                     lv_chart_set_range( ui_PM10chart, LV_CHART_AXIS_PRIMARY_Y, 0, sensor_data.pm10_max + 20);
             }
+            dtostrf(sensor_data.pm10_max, 6, 1, pm10max);
+            lv_label_set_text(ui_pm10max, pm10max);
             //Insert new value 
             ui_PM10chart_series_1_array[CHART_DATA_LENGTH - 1] = (uint16_t) (avgPM10);
             lv_chart_set_ext_y_array(ui_PM10chart, ui_PM10chart_series_1, ui_PM10chart_series_1_array);
@@ -386,8 +386,6 @@ void sensorData(void *params)
             char pm4avg[6] = {0};
             char pm4max[6] = {0};
             dtostrf(avgPM4, 6, 1, pm4avg);
-            lv_label_set_text(ui_pm4avg, pm4avg);
-            dtostrf(sensor_data.pm4_max, 6, 1, pm4max);
             lv_label_set_text(ui_pm4max, pm4max);
             //shift the other values to the left
             memcpy(ui_PM4chart_series_1_array, ui_PM4chart_series_1_array + 1, (CHART_DATA_LENGTH - 1)*sizeof(lv_coord_t));
@@ -397,6 +395,8 @@ void sensorData(void *params)
                 if(sensor_data.pm4_max > 50)
                     lv_chart_set_range( ui_PM4chart, LV_CHART_AXIS_PRIMARY_Y, 0, sensor_data.pm4_max + 20);
             }
+            lv_label_set_text(ui_pm4avg, pm4avg);
+            dtostrf(sensor_data.pm4_max, 6, 1, pm4max);
             //Insert new value 
             ui_PM4chart_series_1_array[CHART_DATA_LENGTH - 1] = (uint16_t) (avgPM4);
             lv_chart_set_ext_y_array(ui_PM4chart, ui_PM4chart_series_1, ui_PM4chart_series_1_array);
@@ -406,8 +406,6 @@ void sensorData(void *params)
             char tvocmax[6] = {0};
             dtostrf(avgTVOC, 6, 1, tvocavg);
             lv_label_set_text(ui_tvocavg, tvocavg);
-            dtostrf(sensor_data.tvoc_max, 6, 1, tvocmax);
-            lv_label_set_text(ui_tvocmax, tvocmax);
             //shift the other values to the left
             memcpy(ui_TVOCchart_series_1_array, ui_TVOCchart_series_1_array + 1, (CHART_DATA_LENGTH - 1)*sizeof(lv_coord_t));
             if(sensor_data.tvoc_max < (avgTVOC))
@@ -416,6 +414,8 @@ void sensorData(void *params)
                 if(sensor_data.tvoc_max > 100)
                     lv_chart_set_range( ui_TVOCchart, LV_CHART_AXIS_PRIMARY_Y, 0, sensor_data.tvoc_max + 20);
             }
+            dtostrf(sensor_data.tvoc_max, 6, 1, tvocmax);
+            lv_label_set_text(ui_tvocmax, tvocmax);
             //Insert new value 
             ui_TVOCchart_series_1_array[CHART_DATA_LENGTH - 1] = (uint16_t) (avgTVOC);
             lv_chart_set_ext_y_array(ui_TVOCchart, ui_TVOCchart_series_1, ui_TVOCchart_series_1_array);
