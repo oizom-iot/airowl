@@ -422,6 +422,7 @@ void sensorData(void *params)
 
             if(WiFi.status() == WL_CONNECTED)
             {
+                lv_img_set_src(ui_nose, &ui_img_airowl_2_png);
                 if (!client.connected()) {
                     reconnect();
                 } else {
@@ -449,7 +450,15 @@ void sensorData(void *params)
                     client.loop();
                 }
             }
-            sensor_data = Sensor_t();
+            else{
+              lv_img_set_src(ui_nose, &ui_img_airowl_1_png);
+            }
+            sensor_data.pm1 = 0;
+            sensor_data.pm10 = 0;
+            sensor_data.pm25 = 0;
+            sensor_data.pm4 = 0;
+            sensor_data.tvoc = 0;
+            sensor_data.count = 0;
         }   
     }
     delay(2000);
