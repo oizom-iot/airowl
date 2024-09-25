@@ -33,36 +33,6 @@ void time_init()
     {
         lv_img_set_src(ui_nose, &ui_img_airowl_1_png);
     }
-    // if (WiFi.status() == WL_CONNECTED) {
-    //     configTzTime(NTP_TIMEZONE, NTP_SERVER1, NTP_SERVER2, NTP_SERVER3);
-    //     lv_img_set_src(ui_nose, &ui_img_airowl_2_png);
-    //     M5.Log.println("\r\nWiFi Connected.");
-    //     M5.Log.print("NTP:");
-    // #if SNTP_ENABLED
-    //     while (sntp_get_sync_status() != SNTP_SYNC_STATUS_COMPLETED)
-    //     {
-    //     M5.Log.print(".");
-    //     delay(1000);
-    //     }
-    // #else
-    //     delay(1600);
-    //     struct tm timeInfo;
-    //     while (!getLocalTime(&timeInfo, 1000))
-    //     {
-    //     M5.Log.print('.');
-    //     };
-    // #endif
-    //     M5.Log.println("\r\nNTP Connected.");
-
-    //     time_t t = time(nullptr)+1; // Advance one second.
-    //     while (t > time(nullptr));  /// Synchronization in seconds
-    //     M5.Rtc.setDateTime( gmtime( &t ) );
-    // }
-    // else
-    // {
-    //     lv_img_set_src(ui_nose, &ui_img_airowl_1_png);
-    //     M5.Log.println("\r\nWiFi none...");
-    // }
 }
 
 void update_time()
