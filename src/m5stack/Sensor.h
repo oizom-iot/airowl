@@ -153,23 +153,23 @@ void setupMQTT()
 
 void setupCharts()
 {
-    ui_PM1chart_series_1 = lv_chart_add_series(ui_PM1chart, lv_color_hex(0x086003), LV_CHART_AXIS_PRIMARY_Y);
+    ui_PM1chart_series_1 = lv_chart_add_series(ui_PM1chart, lv_color_hex(0x41b4d1), LV_CHART_AXIS_PRIMARY_Y);
     lv_chart_set_ext_y_array(ui_PM1chart, ui_PM1chart_series_1, ui_PM1chart_series_1_array);
     lv_chart_set_range( ui_PM1chart, LV_CHART_AXIS_PRIMARY_Y, 0, 50);
 
-    ui_PM25chart_series_1 = lv_chart_add_series(ui_PM25chart, lv_color_hex(0x086003), LV_CHART_AXIS_PRIMARY_Y);
+    ui_PM25chart_series_1 = lv_chart_add_series(ui_PM25chart, lv_color_hex(0x41b4d1), LV_CHART_AXIS_PRIMARY_Y);
     lv_chart_set_ext_y_array(ui_PM25chart, ui_PM25chart_series_1, ui_PM25chart_series_1_array);
     lv_chart_set_range( ui_PM25chart, LV_CHART_AXIS_PRIMARY_Y, 0, 50);
 
-    ui_PM10chart_series_1 = lv_chart_add_series(ui_PM10chart, lv_color_hex(0x086003), LV_CHART_AXIS_PRIMARY_Y);
+    ui_PM10chart_series_1 = lv_chart_add_series(ui_PM10chart, lv_color_hex(0x41b4d1), LV_CHART_AXIS_PRIMARY_Y);
     lv_chart_set_ext_y_array(ui_PM10chart, ui_PM10chart_series_1, ui_PM10chart_series_1_array);
     lv_chart_set_range( ui_PM10chart, LV_CHART_AXIS_PRIMARY_Y, 0, 50);
 
-    ui_PM4chart_series_1 = lv_chart_add_series(ui_PM4chart, lv_color_hex(0x086003), LV_CHART_AXIS_PRIMARY_Y);
+    ui_PM4chart_series_1 = lv_chart_add_series(ui_PM4chart, lv_color_hex(0x41b4d1), LV_CHART_AXIS_PRIMARY_Y);
     lv_chart_set_ext_y_array(ui_PM4chart, ui_PM4chart_series_1, ui_PM4chart_series_1_array);
     lv_chart_set_range( ui_PM4chart, LV_CHART_AXIS_PRIMARY_Y, 0, 50);
 
-    ui_TVOCchart_series_1 = lv_chart_add_series(ui_TVOCchart, lv_color_hex(0x086003), LV_CHART_AXIS_PRIMARY_Y);
+    ui_TVOCchart_series_1 = lv_chart_add_series(ui_TVOCchart, lv_color_hex(0x41b4d1), LV_CHART_AXIS_PRIMARY_Y);
     lv_chart_set_ext_y_array(ui_TVOCchart, ui_TVOCchart_series_1, ui_TVOCchart_series_1_array);
     lv_chart_set_range( ui_TVOCchart, LV_CHART_AXIS_PRIMARY_Y, 0, 100);
 }
@@ -302,6 +302,15 @@ void sensorData(void *params)
             int pm10Index = calculateSubIndex(avgPM10, pm10Bp);
             int tvocIndex = calculateSubIndex(avgTVOC, tvocBp);
 
+            uint32_t pm25_color = getAQIColor(pm25Index);
+            lv_obj_set_style_text_color(ui_pm25label, lv_color_hex(pm25_color), LV_PART_MAIN | LV_STATE_DEFAULT );
+            
+            uint32_t pm10_color = getAQIColor(pm10Index);
+            lv_obj_set_style_text_color(ui_pm10label, lv_color_hex(pm10_color), LV_PART_MAIN | LV_STATE_DEFAULT );
+            
+            uint32_t tvoc_color = getAQIColor(tvocIndex);
+            lv_obj_set_style_text_color(ui_tvoclabel, lv_color_hex(tvoc_color), LV_PART_MAIN | LV_STATE_DEFAULT );
+
             // Combine sub-indices (choose one method)
             // Method 1: Maximum Sub-Index
             int aqi = max(max(pm25Index, pm10Index), tvocIndex);
@@ -312,9 +321,9 @@ void sensorData(void *params)
 
             // Get AQI category
             String airQualityCategory = getAQICategory(aqi);
-            uint32_t color = getAQIColor(aqi);
-            lv_obj_set_style_bg_color(ui_lefteye, lv_color_hex(color), LV_PART_MAIN | LV_STATE_DEFAULT );
-            lv_obj_set_style_bg_color(ui_righteye, lv_color_hex(color), LV_PART_MAIN | LV_STATE_DEFAULT );
+            uint32_t eye_color = getAQIColor(aqi);
+            lv_obj_set_style_bg_color(ui_lefteye, lv_color_hex(eye_color), LV_PART_MAIN | LV_STATE_DEFAULT );
+            lv_obj_set_style_bg_color(ui_righteye, lv_color_hex(eye_color), LV_PART_MAIN | LV_STATE_DEFAULT );
 
             // Set PM1 Chart Screen
             char pm1avg[6] = {0};

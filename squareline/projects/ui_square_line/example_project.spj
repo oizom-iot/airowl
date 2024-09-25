@@ -291,25 +291,25 @@
               {
                 "nid": -1294212025,
                 "strtype": "IMGBUTTON/Image_disabled",
-                "strval": "",
+                "strval": "-",
                 "InheritedType": 5
               },
               {
                 "nid": 785403753,
                 "strtype": "IMGBUTTON/Image_checked_released",
-                "strval": "",
+                "strval": "-",
                 "InheritedType": 5
               },
               {
                 "nid": -1237643181,
                 "strtype": "IMGBUTTON/Image_checked_pressed",
-                "strval": "",
+                "strval": "-",
                 "InheritedType": 5
               },
               {
                 "nid": 88474128,
                 "strtype": "IMGBUTTON/Image_checked_disabled",
-                "strval": "",
+                "strval": "-",
                 "InheritedType": 5
               },
               {
@@ -3615,6 +3615,7 @@
           {
             "disabled": false,
             "nid": 913548669,
+            "flags": 1048576,
             "strtype": "_event/EventHandler",
             "strval": "CLICKED",
             "childs": [
@@ -3691,7 +3692,8 @@
           {
             "disabled": false,
             "nid": 1521124595,
-            "strtype": "SCREEN/EventHandler",
+            "flags": 1048576,
+            "strtype": "_event/EventHandler",
             "strval": "SCREEN_LOADED",
             "childs": [
               {
@@ -3744,7 +3746,7 @@
                   {
                     "nid": -1117173668,
                     "strtype": "CHANGE SCREEN/Fade_mode",
-                    "strval": "NONE",
+                    "strval": "FADE_ON",
                     "InheritedType": 3
                   },
                   {
@@ -16482,6 +16484,7 @@
               },
               {
                 "nid": -822203457,
+                "flags": 1048576,
                 "strtype": "CHART/Chart_data",
                 "InheritedType": 1
               },
@@ -18099,9 +18102,9 @@
                         "nid": 1149945288,
                         "strtype": "_style/Bg_Color",
                         "intarray": [
-                          8,
-                          97,
-                          0,
+                          65,
+                          180,
+                          209,
                           255
                         ],
                         "InheritedType": 7
@@ -22078,9 +22081,9 @@
                         "nid": 824639658,
                         "strtype": "_style/Bg_Color",
                         "intarray": [
-                          8,
-                          97,
-                          0,
+                          65,
+                          180,
+                          209,
                           255
                         ],
                         "InheritedType": 7
@@ -26058,9 +26061,9 @@
                         "nid": 867341194,
                         "strtype": "_style/Bg_Color",
                         "intarray": [
-                          8,
-                          97,
-                          0,
+                          65,
+                          180,
+                          209,
                           255
                         ],
                         "InheritedType": 7
@@ -30038,9 +30041,9 @@
                         "nid": -1750303306,
                         "strtype": "_style/Bg_Color",
                         "intarray": [
-                          8,
-                          97,
-                          0,
+                          65,
+                          180,
+                          209,
                           255
                         ],
                         "InheritedType": 7
@@ -34018,9 +34021,9 @@
                         "nid": -1116598539,
                         "strtype": "_style/Bg_Color",
                         "intarray": [
-                          8,
-                          97,
-                          0,
+                          65,
+                          180,
+                          209,
                           255
                         ],
                         "InheritedType": 7
@@ -37585,7 +37588,7 @@
     "theme_color2": 0,
     "uiExportFolderPath": "/Users/sohilpatel/Documents/GitHub/airowl/src/m5stack/ui",
     "projectExportFolderPath": "/Users/sohilpatel/Documents/GitHub/airowl/squareline/projects/ui_square_line",
-    "backup_cnt": 154,
+    "backup_cnt": 166,
     "autosave_cnt": 0,
     "lvgl_version": "8.3.6",
     "callfuncsexport": "DONT_EXPORT",

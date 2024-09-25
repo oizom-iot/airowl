@@ -73,7 +73,7 @@ lv_obj_set_x( ui_return4, 9 );
 lv_obj_set_y( ui_return4, 85 );
 lv_obj_set_align( ui_return4, LV_ALIGN_CENTER );
 lv_obj_set_style_radius(ui_return4, 0, LV_PART_MAIN| LV_STATE_DEFAULT);
-lv_obj_set_style_bg_color(ui_return4, lv_color_hex(0x086100), LV_PART_MAIN | LV_STATE_DEFAULT );
+lv_obj_set_style_bg_color(ui_return4, lv_color_hex(0x41B4D1), LV_PART_MAIN | LV_STATE_DEFAULT );
 lv_obj_set_style_bg_opa(ui_return4, 255, LV_PART_MAIN| LV_STATE_DEFAULT);
 lv_obj_set_style_text_color(ui_return4, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT );
 lv_obj_set_style_text_opa(ui_return4, 255, LV_PART_MAIN| LV_STATE_DEFAULT);

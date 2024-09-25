@@ -404,7 +404,7 @@ if ( event_code == LV_EVENT_CLICKED) {
       _ui_screen_change( &ui_dashboard, LV_SCR_LOAD_ANIM_MOVE_LEFT, 500, 0, &ui_dashboard_screen_init);
 }
 if ( event_code == LV_EVENT_SCREEN_LOADED) {
-      _ui_screen_change( &ui_dashboard, LV_SCR_LOAD_ANIM_NONE, 500, 20000, &ui_dashboard_screen_init);
+      _ui_screen_change( &ui_dashboard, LV_SCR_LOAD_ANIM_FADE_ON, 500, 20000, &ui_dashboard_screen_init);
 }
 }
 void ui_event_dashboard( lv_event_t * e) {
