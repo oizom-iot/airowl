@@ -339,7 +339,7 @@ void sensorData(void *params)
             lv_obj_set_style_text_color(ui_pm1label, lv_color_hex(pm1_color), LV_PART_MAIN | LV_STATE_DEFAULT );
 
             uint32_t pm4_color = getAQIColor(pm4Index);
-            lv_obj_set_style_text_color(ui_pm1label, lv_color_hex(pm4_color), LV_PART_MAIN | LV_STATE_DEFAULT );
+            lv_obj_set_style_text_color(ui_pm4label, lv_color_hex(pm4_color), LV_PART_MAIN | LV_STATE_DEFAULT );
 
             // Combine sub-indices (choose one method)
             // Method 1: Maximum Sub-Index
