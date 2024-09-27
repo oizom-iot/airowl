@@ -9,7 +9,7 @@
 
 #define MAXBUF_REQUIREMENT 48
 #define CHART_DATA_LENGTH 15
-#define DATA_FREQ 60
+#define DATA_FREQ 150
 
 #if (defined(I2C_BUFFER_LENGTH) &&                 \
      (I2C_BUFFER_LENGTH >= MAXBUF_REQUIREMENT)) || \
