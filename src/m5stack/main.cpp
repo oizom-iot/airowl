@@ -6,7 +6,7 @@
 // #include <M5CoreS3.h>  // no touch support yet
 #include <M5Unified.h>
 #endif
-
+#include <esp_task_wdt.h>
 #include <WiFiManager.h> 
 #include <WiFiManagerTz.h>
 #include "Sensor.h"
@@ -16,7 +16,11 @@
 #include "time_func.h"
 #include <FS.h>
 
+
+#define WDT_TIMEOUT 60
+
 WiFiManager wm;
+TaskHandle_t myTaskHandle;
 
 void on_time_available(struct timeval *t)
 {
@@ -36,10 +40,14 @@ void setup() {
   {
     M5.Log.println("RTC Enabled");
   }
+  // Initialize the Task Watchdog Timer
+  esp_task_wdt_init(WDT_TIMEOUT, true); // Enable panic so ESP32 restarts
+  // Add the current task to the watchdog (loopTask)
+  esp_task_wdt_add(NULL); // NULL means current task
   String mac = WiFi.macAddress();
   mac.replace(":", "");
   String apName = "AIROWL_" + mac.substring(6);
-  xTaskCreatePinnedToCore(sensorData, "sensorData", 10000, NULL, 2, NULL, 0);
+  xTaskCreatePinnedToCore(sensorData, "sensorData", 10000, NULL, 2, &myTaskHandle, 1);
   WiFiManagerNS::NTP::onTimeAvailable( &on_time_available );
   WiFiManagerNS::init( &wm, nullptr );
   std::vector<const char *> menu = {"wifi", "info", "custom", "param", "sep", "restart", "exit"};
@@ -49,10 +57,14 @@ void setup() {
   wm.autoConnect(apName.c_str(), "12345678");
   lv_label_set_text(ui_devicename, apName.c_str());
   time_init(); // Initialize time and date from compiler
+  // Add the new task to the watchdog
+  esp_task_wdt_add(myTaskHandle);
 }
 
 void loop() {  
   wm.process();
   lv_handler();  // Update UI
   update_time(); // Update time and date on UI
+  // Reset the watchdog timer
+  esp_task_wdt_reset();
 }

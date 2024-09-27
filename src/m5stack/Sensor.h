@@ -74,6 +74,26 @@ uint32_t getAQIColor(int aqi) {
 }
 
 // PM2.5 Breakpoints
+AQIBreakpoint pm1Bps[] = {
+  {0.0, 8.0, 0, 50},
+  {8.1, 25.4, 51, 100},
+  {25.5, 35.4, 101, 150},
+  {35.5, 50.4, 151, 200},
+  {50.5, 75.4, 201, 300},
+  {75.5, 500.4, 301, 500}
+};
+
+// PM2.5 Breakpoints
+AQIBreakpoint pm4Bps[] = {
+  {0.0, 35.0, 0, 50},
+  {35.1, 75.4, 51, 100},
+  {75.5, 125.4, 101, 150},
+  {125.5, 175.4, 151, 200},
+  {175.5, 250.4, 201, 300},
+  {250.5, 500.4, 301, 500}
+};
+
+// PM2.5 Breakpoints
 AQIBreakpoint pm25Bps[] = {
   {0.0, 12.0, 0, 50},
   {12.1, 35.4, 51, 100},
@@ -283,7 +303,7 @@ void sensorData(void *params)
         } else {
             dtostrf(t_temp, 4, 1, tempbuffer);
             lv_label_set_text(ui_templabel, tempbuffer);
-        } 
+        }
 
         if(sensor_data.count == DATA_FREQ)
         {
@@ -296,11 +316,15 @@ void sensorData(void *params)
             AQIBreakpoint pm25Bp = getBreakpoint(avgPM25, pm25Bps, sizeof(pm25Bps)/sizeof(pm25Bps[0]));
             AQIBreakpoint pm10Bp = getBreakpoint(avgPM10, pm10Bps, sizeof(pm10Bps)/sizeof(pm10Bps[0]));
             AQIBreakpoint tvocBp = getBreakpoint(avgTVOC, tvocBps, sizeof(tvocBps)/sizeof(tvocBps[0]));
+            AQIBreakpoint pm1Bp = getBreakpoint(avgPM1, pm1Bps, sizeof(tvocBps)/sizeof(tvocBps[0]));
+            AQIBreakpoint pm4Bp = getBreakpoint(avgPM4, pm4Bps, sizeof(tvocBps)/sizeof(tvocBps[0]));
 
             // Calculate sub-indices
             int pm25Index = calculateSubIndex(avgPM25, pm25Bp);
             int pm10Index = calculateSubIndex(avgPM10, pm10Bp);
             int tvocIndex = calculateSubIndex(avgTVOC, tvocBp);
+            int pm1Index = calculateSubIndex(avgPM1, pm1Bp);
+            int pm4Index = calculateSubIndex(avgPM4, pm4Bp);
 
             uint32_t pm25_color = getAQIColor(pm25Index);
             lv_obj_set_style_text_color(ui_pm25label, lv_color_hex(pm25_color), LV_PART_MAIN | LV_STATE_DEFAULT );
@@ -310,6 +334,12 @@ void sensorData(void *params)
             
             uint32_t tvoc_color = getAQIColor(tvocIndex);
             lv_obj_set_style_text_color(ui_tvoclabel, lv_color_hex(tvoc_color), LV_PART_MAIN | LV_STATE_DEFAULT );
+
+            uint32_t pm1_color = getAQIColor(pm1Index);
+            lv_obj_set_style_text_color(ui_pm1label, lv_color_hex(pm1_color), LV_PART_MAIN | LV_STATE_DEFAULT );
+
+            uint32_t pm4_color = getAQIColor(pm4Index);
+            lv_obj_set_style_text_color(ui_pm1label, lv_color_hex(pm4_color), LV_PART_MAIN | LV_STATE_DEFAULT );
 
             // Combine sub-indices (choose one method)
             // Method 1: Maximum Sub-Index
@@ -459,8 +489,9 @@ void sensorData(void *params)
             sensor_data.pm4 = 0;
             sensor_data.tvoc = 0;
             sensor_data.count = 0;
-        }   
+        }
     }
+    esp_task_wdt_reset(); // Reset watchdog for this task
     delay(2000);
   }
 }
