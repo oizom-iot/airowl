@@ -1,4 +1,5 @@
 SET(SOURCES screens/ui_Intro.c
+    screens/ui_qrcode.c
     screens/ui_owl.c
     screens/ui_dashboard.c
     screens/ui_PM1graph.c

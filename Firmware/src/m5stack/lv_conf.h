@@ -639,7 +639,7 @@
 #define LV_USE_GIF 1
 
 /*QR code library*/
-#define LV_USE_QRCODE 0
+#define LV_USE_QRCODE 1
 
 /*FreeType library*/
 #define LV_USE_FREETYPE 0

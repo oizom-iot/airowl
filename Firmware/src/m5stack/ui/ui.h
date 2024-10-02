@@ -40,6 +40,13 @@ extern lv_obj_t *ui_Intro;
 void ui_event_logo( lv_event_t * e);
 extern lv_obj_t *ui_logo;
 extern lv_obj_t *ui_devicename;
+// SCREEN: ui_qrcode
+void ui_qrcode_screen_init(void);
+void ui_event_qrcode( lv_event_t * e);
+extern lv_obj_t *ui_qrcode;
+extern lv_obj_t *ui_qrcodename;
+extern lv_obj_t *ui_qrcode_obj;
+extern const char * ui_qrcodedata;
 // SCREEN: ui_owl
 void ui_owl_screen_init(void);
 void ui_event_owl( lv_event_t * e);
