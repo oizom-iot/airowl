@@ -7,10 +7,10 @@ This folder contains the firmware files used to program the Airowl. The Folder c
 PlatformIO is a VS code extension that enables us to program microcontrollers using VS code. The PlatformIO core supports more than 1500 development boards including the M5 core S3 used in the Airowl. PlatformIO supports both esp-idf and arduino environments. 
 
 ### Step 1  Installing PlatformIO 
-PlatformIO can be installed using the extensions feature in Visual Studio Code.**
+PlatformIO can be installed using the extensions feature in Visual Studio Code.
  
 
-![alt text](/installing_platformIO.png)
+![alt text](installing_platformIO.png)
 
 ### Step 2 Using PlatformIO with Airowl Firmware
 
@@ -18,7 +18,7 @@ PlatformIO can be installed using the extensions feature in Visual Studio Code.*
 In order to program the Airowl with the firmware, download and extract this repository or clone it.
 Open platformIO using the platformIO icon from the sidebar.
 
-![accessing_PlatformIO](/accessing_platformio.png)
+![accessing_PlatformIO](accessing_platformio.png)
 
 
 
@@ -26,23 +26,23 @@ Open PIO home to access platformIO, this opens a new tab in VS code which can be
 
 
 
-![alt text](/PIO_home.png)
+![alt text](PIO_home.png)
 
 
 
-![alt text](/PIO_homepage.png)
+![alt text](PIO_homepage.png)
 
 
 Click on Open Project button as highlighted in the above picture and locate the downloaded repository, and open the Firmware folder. Ensure that the folder has platformio.ini file present in it as this file acts as the config file for platformio and is essential to program the firmware to the Airowl. 
 
-![alt text](/opening_firmware_repo.png)
+![alt text](opening_firmware_repo.png)
 
 ### Step 3  Uploading to the device using PlatformIO
 
 
 Once the platformio.ini file is loaded, ensure that Airowl is connected to your PC, and upload the firmware using the PlatformIO : upload button
 
-![PIO_upload](/PIO_upload.png)
+![PIO_upload](PIO_upload.png)
 
 The terminal displays the upload status and on Successful upload displays the following :
 
@@ -74,21 +74,21 @@ Using the Add File into ASSETS option, more images can be added into the project
 
 On selecting the appropriate screen , the elements inside it are visible in the Heirarchy tab.
 
-![alt text](/airowl_screen2.png)
+![alt text](airowl_screen2.png)
 On selecting the element, we can modify the properties of the element through the inspector tab on the right such as size, position.
 The font tab is used to handle the fonts used in the project.
 
 The animation tab is usd to create/modify animations, the animations can be lated applied to different targets in the inspector tab.
 The animations can be binded to events based on screen touch/ timeout basis from the inspector tab.
 
-![alt text](/animation_tab.png)
+![alt text](animation_tab.png)
 
 The white play button on the top (left of Inspector tab) can be clicked to simulate the animation, before using it in the Firmware.
 
 ### Step 2. Exporting the UI Files
 Once the UI has been created , it is time to export the UI files. This can be done using the Export option on the top-left of the window. However, we must first ensure that the UI export path is correctly set inside the correct directory, this can be done using the file -> project settings option as depicted below:
 
-![alt text](/project_settings.png)
+![alt text](project_settings.png)
 
 It must be ensured that the Project export path is [ui_square_line](/squareline/projects/ui_square_line/) and the UI files export path is set to [/src/m5stack/ui/](/src/m5stack/ui/), this ensures that on updating the UI and exporting the UI files through Squareline Studio, the changes are reflected in the Firmware.
 
@@ -130,7 +130,7 @@ The Wire.h is the standard library used to handle I2C communication between the 
 
 Refer to the Pinmap of M5 core S3 SE below:
 
-![alt text](/M5_coreS3_SE_Pinmap.png)
+![alt text](M5_coreS3_SE_Pinmap.png)
 
 
 Various LVGL UI objects are used in this file to overwrite/update the values displayed on the screen.
