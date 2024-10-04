@@ -24,6 +24,7 @@ lv_obj_t *ui_Intro;
 void ui_event_logo( lv_event_t * e);
 lv_obj_t *ui_logo;
 lv_obj_t *ui_devicename;
+lv_obj_t *ui_firmwareversion;
 
 
 // SCREEN: ui_qrcode
@@ -33,6 +34,7 @@ lv_obj_t *ui_qrcode;
 lv_obj_t *ui_qrcodename;
 lv_obj_t *ui_qrcode_obj;
 const char *ui_qrcodedata;
+
 
 // SCREEN: ui_owl
 void ui_owl_screen_init(void);

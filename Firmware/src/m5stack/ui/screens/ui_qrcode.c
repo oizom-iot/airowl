@@ -17,7 +17,7 @@ ui_qrcode_obj = lv_qrcode_create(ui_qrcode, 150, lv_color_hex3(0x000), lv_color_
 ui_qrcodename = lv_label_create(ui_qrcode);
 lv_obj_set_width( ui_qrcodename, LV_SIZE_CONTENT);  /// 1
 lv_obj_set_height( ui_qrcodename, LV_SIZE_CONTENT);   /// 1
-lv_obj_set_x( ui_qrcodename, 7 );
+lv_obj_set_x( ui_qrcodename, 0 );
 lv_obj_set_y( ui_qrcodename, 99 );
 lv_obj_set_align( ui_qrcodename, LV_ALIGN_CENTER );
 lv_label_set_text(ui_qrcodename,"OIZOM AIROWL");

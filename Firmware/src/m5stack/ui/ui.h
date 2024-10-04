@@ -40,6 +40,7 @@ extern lv_obj_t *ui_Intro;
 void ui_event_logo( lv_event_t * e);
 extern lv_obj_t *ui_logo;
 extern lv_obj_t *ui_devicename;
+extern lv_obj_t *ui_firmwareversion;
 // SCREEN: ui_qrcode
 void ui_qrcode_screen_init(void);
 void ui_event_qrcode( lv_event_t * e);

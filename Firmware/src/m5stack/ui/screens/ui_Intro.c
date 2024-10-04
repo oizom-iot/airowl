@@ -21,18 +21,27 @@ lv_imgbtn_set_src(ui_logo, LV_IMGBTN_STATE_CHECKED_RELEASED, NULL, &ui__temporar
 lv_imgbtn_set_src(ui_logo, LV_IMGBTN_STATE_CHECKED_DISABLED, NULL, &ui__temporary_image, NULL);
 lv_obj_set_height( ui_logo, 206);
 lv_obj_set_width( ui_logo, LV_SIZE_CONTENT);  /// 1
-lv_obj_set_x( ui_logo, 2 );
+lv_obj_set_x( ui_logo, 0 );
 lv_obj_set_y( ui_logo, -10 );
 lv_obj_set_align( ui_logo, LV_ALIGN_CENTER );
 
 ui_devicename = lv_label_create(ui_Intro);
 lv_obj_set_width( ui_devicename, LV_SIZE_CONTENT);  /// 1
 lv_obj_set_height( ui_devicename, LV_SIZE_CONTENT);   /// 1
-lv_obj_set_x( ui_devicename, 7 );
+lv_obj_set_x( ui_devicename, 0 );
 lv_obj_set_y( ui_devicename, 99 );
 lv_obj_set_align( ui_devicename, LV_ALIGN_CENTER );
 lv_label_set_text(ui_devicename,"OIZOM AIROWL");
 lv_obj_set_style_text_font(ui_devicename, &lv_font_montserrat_20, LV_PART_MAIN| LV_STATE_DEFAULT);
+
+ui_firmwareversion = lv_label_create(ui_Intro);
+lv_obj_set_width( ui_firmwareversion, LV_SIZE_CONTENT);  /// 1
+lv_obj_set_height( ui_firmwareversion, LV_SIZE_CONTENT);   /// 1
+lv_obj_set_x( ui_firmwareversion, 0 );
+lv_obj_set_y( ui_firmwareversion, -102 );
+lv_obj_set_align( ui_firmwareversion, LV_ALIGN_CENTER );
+lv_label_set_text(ui_firmwareversion,"version - 1.0");
+lv_obj_set_style_text_font(ui_firmwareversion, &lv_font_montserrat_12, LV_PART_MAIN| LV_STATE_DEFAULT);
 
 lv_obj_add_event_cb(ui_logo, ui_event_logo, LV_EVENT_ALL, NULL);
 lv_obj_add_event_cb(ui_Intro, ui_event_Intro, LV_EVENT_ALL, NULL);
