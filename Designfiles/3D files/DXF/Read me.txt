@@ -1,0 +1,5 @@
+Transparent Acralic sheet DXF file for laser cutting (Front facia)
+Thickness - 1mm ± 0.2mm
+
+Black Acralic sheet DXF file for laser cutting (Front facia)
+Thickness - 5mm

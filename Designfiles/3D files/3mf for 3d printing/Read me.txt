@@ -1,0 +1,7 @@
+3mf file for 3d printing
+
+Suggestions*
+Material - Pla+ 
+Color - Matte black
+Print qualit - 0.15mm layer for 0.4mm nozzle
+               use 0.08mm layer for better quality
