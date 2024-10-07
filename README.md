@@ -9,7 +9,7 @@ The BOM for the Airowl is as Follows:
 
 | SR. | ITEM DESCRIPTION       | NOTES                                  | Qty | Product Links                                                 |
 |-----|------------------------|----------------------------------------|-----|---------------------------------------------------------------|
-| 1   | M5 STACK              | SCREEN                                 | 1   | [CoreS3 SE](https://shop.m5stack.com/products/m5stack-cores3-se-iot-controller-w-o-battery-bottom) |
+| 1   | M5 STACK              | SCREEN                                 | 1   | <a href="https://shop.m5stack.com/products/m5stack-cores3-se-iot-controller-w-o-battery-bottom" target="_blank">Link</a> |
 | 2   | FRONT FACIA      | UV FRONT 1.3 MM + REAR BLACK 5 MM      | 1   | [Front](/Designfiles/)                                             |
 | 3   | 3D PRINT BACK CASE    | BLACK MATTLE 3D PRINTED CASE           | 1   | [Back](/Designfiles)                                          |
 | 4   | FASTENERS             | M3 X 8 mm PHILIPS HEAD (SS)            | 2   |                                                               |
