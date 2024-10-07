@@ -19,7 +19,7 @@
 
 #define WDT_TIMEOUT 60
 
-#define FIRMWARE_VERSION "version - 1.0"
+#define FIRMWARE_VERSION "version - 1.1"
 
 WiFiManager wm;
 TaskHandle_t myTaskHandle;
@@ -57,15 +57,15 @@ void setup() {
   WiFiManagerNS::NTP::onTimeAvailable( &on_time_available );
   WiFiManagerNS::init( &wm, nullptr );
   std::vector<const char *> menu = {"wifi", "info", "custom", "param", "sep", "restart", "exit"};
-  
-  // Remove already saved wifi credentials
-  // wm.erase();
-  
+
   // Enable WifiManager
   wm.setMenu(menu);
   wm.setConfigPortalBlocking(false);
   wm.setTitle("AIROWL Configuration");
   wm.autoConnect(apName.c_str(), "12345678");
+  
+  // Remove already saved wifi credentials
+  // wm.erase();
   
   // Begin LVGL Display
   lv_begin();  // Initialize LVGL for the Core2 screen

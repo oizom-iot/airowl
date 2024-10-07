@@ -133,6 +133,8 @@ String deviceName = "";
 
 // MQTT Server Details
 const char* mqtt_server = "mqtt.oizom.com";
+const char* username = "xxxx";
+const char* password = "xxxx";
 
 lv_chart_series_t * ui_PM1chart_series_1 = { 0 };
 static lv_coord_t ui_PM1chart_series_1_array[CHART_DATA_LENGTH] = { 0 };
@@ -158,7 +160,7 @@ boolean reconnect() {
   {
     String clientId = "AIROWL";
     clientId += String(random(0xffffff), HEX);
-    if (client.connect(clientId.c_str(), "oizom", "12345678")) {
+    if (client.connect(clientId.c_str(), username, password)) {
         M5.Log.println("MQTT Connected");
     }
   }
@@ -455,30 +457,29 @@ void sensorData(void *params)
                 lv_img_set_src(ui_nose, &ui_img_airowl_2_png);
                 if (!client.connected()) {
                     reconnect();
-                } else {
-                    // Construct the JSON string
-                    String jsonString = "{";
-                    jsonString += "\"deviceId\":\"";
-                    jsonString += deviceName;
-                    jsonString += "\",";
-                    jsonString += "\"p3\":";
-                    jsonString += String(avgPM1, 2);
-                    jsonString += ",";
-                    jsonString += "\"p1\":";
-                    jsonString += String(avgPM25, 2);
-                    jsonString += ",";
-                    jsonString += "\"p2\":";
-                    jsonString += String(avgPM10, 2);
-                    jsonString += ",";
-                    jsonString += "\"p5\":";
-                    jsonString += String(avgPM4, 2);
-                    jsonString += ",";
-                    jsonString += "\"v2\":";
-                    jsonString += String(avgTVOC, 2);
-                    jsonString += "}";
-                    client.publish("airowl", jsonString.c_str());
-                    client.loop();
-                }
+                } 
+                // Construct the JSON string
+                String jsonString = "{";
+                jsonString += "\"deviceId\":\"";
+                jsonString += deviceName;
+                jsonString += "\",";
+                jsonString += "\"p3\":";
+                jsonString += String(avgPM1, 2);
+                jsonString += ",";
+                jsonString += "\"p1\":";
+                jsonString += String(avgPM25, 2);
+                jsonString += ",";
+                jsonString += "\"p2\":";
+                jsonString += String(avgPM10, 2);
+                jsonString += ",";
+                jsonString += "\"p5\":";
+                jsonString += String(avgPM4, 2);
+                jsonString += ",";
+                jsonString += "\"v2\":";
+                jsonString += String(avgTVOC, 2);
+                jsonString += "}";
+                client.publish("airowl", jsonString.c_str());
+                client.loop();
             }
             else{
               lv_img_set_src(ui_nose, &ui_img_airowl_1_png);
