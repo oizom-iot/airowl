@@ -1,8 +1,9 @@
-# 3D Printing and Laser Cutting Files
+# Design files
 
 ## 3MF File for 3D Printing
+![alt text](../Images/21.PNG)
 
-### Suggestions
+### Suggestions for 3D printing
 - **Material**: PLA+
 - **Color**: Matte Black
 - **Print Quality**:
@@ -14,10 +15,16 @@
 - **Transparent Acrylic Sheet (Front Facia)**
   - Thickness: 1mm ± 0.2mm
 
+![alt text](../Images/23.PNG)
+
 - **Black Acrylic Sheet (Front Facia)**
   - Thickness: 5mm
 
+ ![alt text](../Images/22.PNG)
+
 ## PDF File for UV Printing
 
-- **Transparent Acrylic Sheet**
+- **Print on transparent Acrylic Sheet**
   - **Color**: Black
+
+![alt text](../Images/24.PNG)
