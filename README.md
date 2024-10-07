@@ -7,7 +7,16 @@ This file provides instructions to assemble the individual components of the Air
 
 The BOM for the Airowl is as Follows:
 
-![alt text](Airowl_BOM.jpeg)
+| SR. | ITEM DESCRIPTION       | NOTES                                  | Qty | Product Links                                                 |
+|-----|------------------------|----------------------------------------|-----|---------------------------------------------------------------|
+| 1   | M5 STACK              | SCREEN                                 | 1   | [CoreS3 SE](https://shop.m5stack.com/products/m5stack-cores3-se-iot-controller-w-o-battery-bottom) |
+| 2   | FRONT FACIA      | UV FRONT 1.3 MM + REAR BLACK 5 MM      | 1   | [Front](/Designfiles/)                                             |
+| 3   | 3D PRINT BACK CASE    | BLACK MATTLE 3D PRINTED CASE           | 1   | [Back](/Designfiles)                                          |
+| 4   | FASTENERS             | M3 X 8 mm PHILIPS HEAD (SS)            | 2   |                                                               |
+| 5   | FASTENERS             | M3 X 20 mm CSK Blunted (SS)            | 2   |                                                               |
+| 6   | FASTENERS             | M3 X 25 mm CSK Blunted (SS)            | 2   |                                                               |
+| 7   | Screw Driver (+)      | Mini Screw Driver                      | 1   |                                                               |
+| 8   | TYPE C - TYPE C CABLE | PORTRONICS TYPE C CABLE                | 1   |                                                               |
 
 More details of the individual components can be found as followed:
 
