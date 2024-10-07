@@ -1,27 +1,23 @@
-# Example squareline demo on ESP32 and ESP32-S3
+# 3D Printing and Laser Cutting Files
 
- platforms: M5Stack Core2 and CoreS3, Lilygo T-S3, Sunton 8048S070
- stacks: LVGL, Arduino_GFX, Squareline, Arduino
+## 3MF File for 3D Printing
 
-works, but not the final word - this represents my learning curve
-for instance, I did not even try the [canonical ESP32 LVGL support](https://github.com/lvgl/lv_port_esp32)
+### Suggestions
+- **Material**: PLA+
+- **Color**: Matte Black
+- **Print Quality**:
+  - 0.15mm layer for 0.4mm nozzle
+  - Use 0.08mm layer for better quality
 
-![alt core2](https://i.imgur.com/bSeJPyV.png)
+## DXF Files for Laser Cutting
 
-credits to [RileyCornelius](https://github.com/RileyCornelius/M5Stack-Core2-Lvgl-Example)
+- **Transparent Acrylic Sheet (Front Facia)**
+  - Thickness: 1mm ± 0.2mm
 
+- **Black Acrylic Sheet (Front Facia)**
+  - Thickness: 5mm
 
-## Build
+## PDF File for UV Printing
 
-This repo uses lvgl and other libraries as a git submodule:
-
-````
-git clone  https://github.com/mhaberler/squareline-esp32.git
-cd squareline-esp32/
-git submodule update --init --recursive
-
-````
-
-Choose target and build.
-
-
+- **Transparent Acrylic Sheet**
+  - **Color**: Black
