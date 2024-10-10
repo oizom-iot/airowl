@@ -1,8 +1,12 @@
-# AIROWL
+<div align="center">
+
+# **AIROWL**
+
+The OIZOM Airowl is an indoor Air Quality Measurement device comprising of the ESP32 S3 powered M5stack Core S3 SE, which integrates the aforementioned controller chip, with a 320 x 240 LCD screen supporting capacitive touch, along with a speaker and the AXP2101 power management chip.
 
 ![Airowl](Images/10.png)
 
-The OIZOM Airowl is an indoor Air Quality Measurement device comprising of the ESP32 S3 powered M5stack Core S3 SE, which integrates the aforementioned controller chip, with a 320 x 240 LCD screen supporting capacitive touch, along with a speaker and the AXP2101 power management chip.
+</div>
 
 This Repository serves as the source of the complete Airowl, consisting of its Firmware source files, 3D files and PCB design Files.
 
@@ -59,9 +63,12 @@ On following the instructions in [Firmware](/Firmware/), the Airowl can be progr
 
 Check this repository releases for newer firmware updates.
 
+## Made by the Community, with -❤️-:
 
+<a href="https://github.com/oizom-iot/airowl/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=oizom-iot/airowl" />
+</a>
 
+## Licensing
 
-
-
-
+Airowl is available under MIT License
