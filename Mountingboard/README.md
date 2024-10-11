@@ -69,6 +69,17 @@ The repository includes:
 
 ---
 
+## Interactive BOM
+
+You can download the Interactive BOM [here](AirOwl_v1/bom/ibom.html).
+
+![image](https://github.com/user-attachments/assets/ab4354e6-8f0d-4422-a824-2a185ae14fc7)
+
+
+
+> **Note**: Right-click the link and select "Open Link in New Tab" or press `Ctrl + Click` to open in a new tab.
+
+
 ## Bill of Materials (BOM)
 
 | Part Name                   | Quantity | Reference Link |
