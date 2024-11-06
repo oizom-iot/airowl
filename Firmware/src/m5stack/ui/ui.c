@@ -316,7 +316,7 @@ lv_anim_set_time(&PropertyAnimation_0, 1000);
 lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
 lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x );
 lv_anim_set_values(&PropertyAnimation_0, 0, -25 );
-lv_anim_set_path_cb( &PropertyAnimation_0, lv_anim_path_linear);
+lv_anim_set_path_cb( &PropertyAnimation_0, lv_anim_path_overshoot);
 lv_anim_set_delay( &PropertyAnimation_0, delay + 0 );
 lv_anim_set_deleted_cb( &PropertyAnimation_0, _ui_anim_callback_free_user_data );
 lv_anim_set_playback_time(&PropertyAnimation_0, 0);
@@ -401,20 +401,34 @@ if ( event_code == LV_EVENT_SCREEN_LOADED) {
 void ui_event_owl( lv_event_t * e) {
     lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
 if ( event_code == LV_EVENT_SCREEN_LOADED) {
-      blink_Animation(ui_righteye, 0);
-      blink_Animation(ui_lefteye, 0);
-      open_Animation(ui_lefteye, 1000);
-      open_Animation(ui_righteye, 1000);
-      blinkx_Animation(ui_rightpupil, 0);
-      blinkx_Animation(ui_leftpupil, 0);
-      openx_Animation(ui_rightpupil, 1000);
-      openx_Animation(ui_leftpupil, 1000);
-      eyeright_Animation(ui_rightpupil, 10000);
-      eyeright_Animation(ui_leftpupil, 10000);
-      eyeleft_Animation(ui_rightpupil, 12000);
-      eyeleft_Animation(ui_leftpupil, 12000);
-      eyeright_Animation(ui_rightpupil, 14000);
-      eyeright_Animation(ui_leftpupil, 14000);
+
+
+      lv_obj_set_width( ui_rightpupil, 60);
+      lv_obj_set_height( ui_rightpupil, 60);
+      lv_obj_set_x( ui_rightpupil, 90 );
+      lv_obj_set_y( ui_rightpupil, -20 );
+      lv_obj_set_align( ui_rightpupil, LV_ALIGN_CENTER );
+      lv_obj_set_width( ui_leftpupil, 60);
+      lv_obj_set_height( ui_leftpupil, 60);
+      lv_obj_set_x( ui_leftpupil, -90 );
+      lv_obj_set_y( ui_leftpupil, -20 );
+      lv_obj_set_align( ui_leftpupil, LV_ALIGN_CENTER );
+      
+
+      blink_Animation(ui_righteye, 200);
+      blink_Animation(ui_lefteye, 200);
+      open_Animation(ui_lefteye, 1200);
+      open_Animation(ui_righteye, 1200);
+      blinkx_Animation(ui_rightpupil, 200);
+      blinkx_Animation(ui_leftpupil, 200);
+      openx_Animation(ui_rightpupil, 1200);
+      openx_Animation(ui_leftpupil, 1200);
+      eyeright_Animation(ui_rightpupil, 10200);
+      eyeright_Animation(ui_leftpupil, 10200);
+      eyeleft_Animation(ui_rightpupil, 12200);
+      eyeleft_Animation(ui_leftpupil, 12200);
+      eyeright_Animation(ui_rightpupil, 14200);
+      eyeright_Animation(ui_leftpupil, 14200);
 }
 if ( event_code == LV_EVENT_CLICKED) {
       _ui_screen_change( &ui_dashboard, LV_SCR_LOAD_ANIM_MOVE_LEFT, 500, 0, &ui_dashboard_screen_init);
@@ -426,7 +440,7 @@ if ( event_code == LV_EVENT_SCREEN_LOADED) {
 void ui_event_dashboard( lv_event_t * e) {
     lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
 if ( event_code == LV_EVENT_SCREEN_LOADED) {
-      _ui_screen_change( &ui_owl, LV_SCR_LOAD_ANIM_FADE_ON, 1000, 15000, &ui_owl_screen_init);
+      _ui_screen_change( &ui_owl, LV_SCR_LOAD_ANIM_FADE_ON, 500, 15000, &ui_owl_screen_init);
 }
 }
 void ui_event_Container7( lv_event_t * e) {
@@ -476,7 +490,7 @@ void ui_event_Button6( lv_event_t * e) {
 if ( event_code == LV_EVENT_CLICKED) {
       _ui_screen_change( &ui_TVOCgraph, LV_SCR_LOAD_ANIM_MOVE_LEFT, 500, 0, &ui_TVOCgraph_screen_init);
 }
-}
+}     
 void ui_event_return( lv_event_t * e) {
     lv_event_code_t event_code = lv_event_get_code(e);lv_obj_t * target = lv_event_get_target(e);
 if ( event_code == LV_EVENT_CLICKED) {
