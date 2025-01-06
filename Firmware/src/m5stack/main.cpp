@@ -75,7 +75,8 @@ void setup() {
   lv_label_set_text(ui_firmwareversion, FIRMWARE_VERSION);
   
   /*Set data*/
-  String qrcodeurl = "https://opendata.oizom.com/device/" + apName;
+  // String qrcodeurl = "https://opendata.oizom.com/device/" + apName;
+  String qrcodeurl = "WIFI:T:WPA;S:" + apName + ";P:12345678;;";
   ui_qrcodedata = qrcodeurl.c_str();
   lv_qrcode_update(ui_qrcode_obj, ui_qrcodedata, strlen(ui_qrcodedata));
   lv_obj_center(ui_qrcode_obj);
